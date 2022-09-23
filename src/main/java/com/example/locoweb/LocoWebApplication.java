@@ -14,7 +14,7 @@ import javax.servlet.ServletContext;
 @SpringBootApplication
 @EnableWebMvc
 @AutoConfiguration
-@ComponentScan(basePackages = {"controller", "model", "service", "microservice"})
+//@ComponentScan(basePackages = {"controller", "model", "service", "microservice"})
 public class LocoWebApplication {
 
     public static void main(String[] args) {
