@@ -10,8 +10,8 @@
           <div class="col-md-6 col-lg-4 mb-md-30px mb-lm-30px">
             <div class="single-wedge">
               <div class="footer-logo">
-                <a href="../static/index.html"><img alt="logo.jpg" class="img-responsive"
-                                                    src="../static/assets/images/logo/logo.jpg"/></a>
+                <a href="index.html"><img alt="logo.jpg" class="img-responsive"
+                                          th:src="@{/assets/images/logo/logo.jpg}"/></a>
               </div>
               <p class="text-infor">We are a team of designers and developers that create high quality
                 HTML template</p>
@@ -66,7 +66,7 @@
                       <div class="footer-blog-post-top">
                         <div class="post-thumbnail">
                           <a href="blog-single-left-sidebar.html">
-                            <img alt="" src="../static/assets/images/blog-image/blog-8.jpg">
+                            <img alt="" th:src="@{/assets/images/blog-image/blog-8.jpg}">
                           </a>
                         </div>
                       </div>
@@ -83,7 +83,7 @@
                       <div class="footer-blog-post-top">
                         <div class="post-thumbnail">
                           <a href="blog-single-left-sidebar.html">
-                            <img alt="" src="../static/assets/images/blog-image/blog-9.jpg">
+                            <img alt="" th:src="@{/assets/images/blog-image/blog-9.jpg}">
                           </a>
                         </div>
                       </div>
@@ -103,7 +103,7 @@
                       <div class="footer-blog-post-top">
                         <div class="post-thumbnail">
                           <a href="blog-single-left-sidebar.html">
-                            <img alt="" src="../static/assets/images/blog-image/blog-10.jpg">
+                            <img alt="" th:src="@{/assets/images/blog-image/blog-10.jpg}">
                           </a>
                         </div>
                       </div>
@@ -120,7 +120,7 @@
                       <div class="footer-blog-post-top">
                         <div class="post-thumbnail">
                           <a href="blog-single-left-sidebar.html">
-                            <img alt="" src="../static/assets/images/blog-image/blog-11.jpg">
+                            <img alt="" th:src="@{/assets/images/blog-image/blog-11.jpg}">
                           </a>
                         </div>
                       </div>
@@ -150,7 +150,7 @@
               <div class="heading-info">Payment:</div>
               <div class="payment-way"><img alt=""
                                             class="payment-img img-responsive"
-                                            src="../static/assets/images/icons/payment.png"/>
+                                            th:src="@{/assets/images/icons/payment.png}"/>
               </div>
             </div>
           </div>
@@ -233,36 +233,36 @@
               <!-- slider -->
               <div class="gallery-top">
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/8.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/8.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/14.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/14.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/15.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/15.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/11.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/11.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/19.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/19.jpg}">
                 </div>
               </div>
               <div class=" gallery-thumbs">
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/8.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/8.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/14.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/14.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/15.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/15.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/11.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/11.jpg}">
                 </div>
                 <div class="single-slide">
-                  <img alt="" class="img-responsive m-auto" src="../static/assets/images/product-image/19.jpg">
+                  <img alt="" class="img-responsive m-auto" th:src="@{/assets/images/product-image/19.jpg}">
                 </div>
               </div>
             </div>
@@ -348,24 +348,24 @@
 ============================================ -->
 
 <!-- Vendors JS -->
-<script src="../static/assets/js/vendor/jquery-3.5.1.min.js"></script>
-<script src="../static/assets/js/vendor/bootstrap.bundle.min.js"></script>
-<script src="../static/assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-<script src="../static/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script th:src="@{/assets/js/vendor/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-migrate-3.1.0.min.js}"></script>
+<script th:src="@{/assets/js/vendor/modernizr-3.6.0.min.js}"></script>
 
 <!-- Plugins JS -->
-<script src="../static/assets/js/plugins/jquery-ui.min.js"></script>
-<script src="../static/assets/js/plugins/slick.js"></script>
-<script src="../static/assets/js/plugins/countdown.js"></script>
-<script src="../static/assets/js/plugins/scrollup.js"></script>
-<script src="../static/assets/js/plugins/elevateZoom.js"></script>
+<script th:src="@{/assets/js/plugins/jquery-ui.min.js}"></script>
+<script th:src="@{/assets/js/plugins/slick.js}"></script>
+<script th:src="@{/assets/js/plugins/countdown.js}"></script>
+<script th:src="@{/assets/js/plugins/scrollup.js}"></script>
+<script th:src="@{/assets/js/plugins/elevateZoom.js}"></script>
 
 <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-<!-- <script src="assets/js/vendor/vendor.min.js"></script>
-        <script src="assets/js/plugins/plugins.min.js"></script> -->
+<!-- <script th:src="@{/assets/js/vendor/vendor.min.js}"></script>
+        <script th:src="@{/assets/js/plugins/plugins.min.js}"></script> -->
 
 <!-- Main Activation JS -->
-<script src="../static/assets/js/main.js"></script>
+<script th:src="@{/assets/js/main.js}"></script>
 </div>
 </body>
 </html>
