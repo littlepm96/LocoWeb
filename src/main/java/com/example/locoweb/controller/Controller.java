@@ -6,8 +6,8 @@ import org.springframework.web.servlet.ModelAndView;
 @org.springframework.stereotype.Controller
 public class Controller {
 
-    @GetMapping({"/list", "/"})
-    public ModelAndView getAllEmployees() {
+    @GetMapping({"/"})
+    public ModelAndView getIndex() {
         ModelAndView mav = new ModelAndView("index");
         return mav;
 

@@ -1,0 +1,64 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>Lista Richieste</title>
+		
+		<link rel="stylesheet" 
+			type="text/css" 
+			href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<h3>Lista Richieste</h3>
+			
+			<hr/>
+			<a th:href="@{/addRichiestaForm}" class="btn btn-primary">Aggiungi Richiesta</a>
+			<br/><br/>
+			<table class="table table-bordered table-striped" id="employeeTable">
+			
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Richiesta</th>
+						<th>Azioni</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="richiesta: ${richiesta}">
+						<td th:text="${richiesta.name}" />
+						<td th:text="${richiesta.cognome}" />
+						<td th:text="${richiesta.descrizione}" />
+						<td>
+							<a th:href="@{/showUpdateForm(richiestaId=${richiesta.id})}" class="btn btn-info">Modifica</a>
+							
+							<a th:href="@{/deleteRichiesta(richiestaId=${richiesta.id})}" class="btn btn-danger ml-2">Elimina</a>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#employeeTable").DataTable({
+						'aoColumnDefs': [{
+        				'bSortable': false,
+        				'aTargets': [-1] /* 1st one, start by the right */
+    				}]
+				});
+			})
+		</script>
+	</body>
+	
+</html>

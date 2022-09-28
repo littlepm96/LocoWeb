@@ -1,0 +1,35 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>Inserisci Richiesta</title>
+		
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+	</head>
+	<body>
+		
+		<div class="container">
+		
+			<h3>Inserisci la tua richiesta</h3>
+			<hr/>
+			
+			<form th:action="@{/saveRichiesta}" th:object="${richiesta}" method="POST">
+				
+				<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
+				
+				<input type="text" th:field="*{cognome}" class="form-control col-4 mb-4" placeholder="inserisci cognome" />
+				
+				<input type="text" th:field="*{descrizione}" class="form-control col-4 mb-4" placeholder="spiegaci la tua necessità" />
+				
+				<button type="submit" class="btn btn-primary col-2">Inoltra Form</button>
+				<input type="hidden" th:field="*{id}" />
+				
+			</form>
+			<hr/>
+			<a th:href="@{/list}">Back to list</a>
+		</div>
+		
+	</body>
+</html>
