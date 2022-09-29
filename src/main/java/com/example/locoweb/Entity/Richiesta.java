@@ -15,11 +15,10 @@ public class Richiesta {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
-
         private String nome;
-
         private String cognome;
-
+        private String email;
+        private int cellulare;
         private String descrizione;
 
 
@@ -31,12 +30,12 @@ public class Richiesta {
                 this.id = id;
         }
 
-        public String getName() {
+        public String getNome() {
                 return nome;
         }
 
-        public void setName(String name) {
-                this.nome = name;
+        public void setNome(String nome) {
+                this.nome = nome;
         }
 
         public String getCognome() {
@@ -47,11 +46,27 @@ public class Richiesta {
                 this.cognome = cognome;
         }
 
-        public String getRichiesta() {
+        public String getEmail() {
+                return email;
+        }
+
+        public void setEmail(String email) {
+                this.email = email;
+        }
+
+        public int getCellulare() {
+                return cellulare;
+        }
+
+        public void setCellulare(int cellulare) {
+                this.cellulare = cellulare;
+        }
+
+        public String getDescrizione() {
                 return descrizione;
         }
 
-        public void setRichiesta(String richiesta) {
-                this.descrizione = richiesta;
+        public void setDescrizione(String descrizione) {
+                this.descrizione = descrizione;
         }
 }

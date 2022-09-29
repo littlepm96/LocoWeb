@@ -20,8 +20,12 @@
 				<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
 				
 				<input type="text" th:field="*{cognome}" class="form-control col-4 mb-4" placeholder="inserisci cognome" />
-				
-				<input type="text" th:field="*{descrizione}" class="form-control col-4 mb-4" placeholder="spiegaci la tua necessità" />
+
+				<input type="text" th:field="*{email}" class="form-control col-4 mb-4" placeholder="inserisci email" />
+
+				<input type="text" th:field="*{cellulare}" class="form-control col-4 mb-4" placeholder="inserisci cellulare" />
+
+				<input type="text" maxlength="200" th:field="*{descrizione}" class="form-control col-4 mb-4" placeholder="spiegaci la tua necessità (max 200 caratteri)" />
 				
 				<button type="submit" class="btn btn-primary col-2">Inoltra Form</button>
 				<input type="hidden" th:field="*{id}" />

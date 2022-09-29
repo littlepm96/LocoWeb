@@ -25,16 +25,20 @@
 			
 				<thead>
 					<tr>
-						<th>Name</th>
+						<th>Nome</th>
+						<th>Cognome</th>
 						<th>Email</th>
-						<th>Richiesta</th>
+						<th>Cellulare</th>
+						<th>Descrizione</th>
 						<th>Azioni</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="richiesta: ${richiesta}">
-						<td th:text="${richiesta.name}" />
+						<td th:text="${richiesta.nome}" />
 						<td th:text="${richiesta.cognome}" />
+						<td th:text="${richiesta.email}" />
+						<td th:text="${richiesta.cellulare}" />
 						<td th:text="${richiesta.descrizione}" />
 						<td>
 							<a th:href="@{/showUpdateForm(richiestaId=${richiesta.id})}" class="btn btn-info">Modifica</a>
