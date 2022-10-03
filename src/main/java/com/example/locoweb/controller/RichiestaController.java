@@ -1,6 +1,5 @@
 package com.example.locoweb.controller;
 
-import com.example.locoweb.Entity.Richiesta;
 import com.example.locoweb.Repository.RichiestaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,13 +25,13 @@ public class RichiestaController {
         @GetMapping("/addRichiestaForm")
         public ModelAndView addRichiestaForm() {
             ModelAndView mav = new ModelAndView("add-richiesta-form");
-            Richiesta newRichiesta = new Richiesta();
+            com.example.locoweb.entity.Richiesta newRichiesta = new com.example.locoweb.entity.Richiesta();
             mav.addObject("richiesta", newRichiesta);
             return mav;
         }
 
         @PostMapping("/saveRichiesta")
-        public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
+        public String saveRichiesta(@ModelAttribute com.example.locoweb.entity.Richiesta richiesta) {
             rRepo.save(richiesta);
             return "redirect:/list";
         }
@@ -40,7 +39,7 @@ public class RichiestaController {
         @GetMapping("/showUpdateForm")
         public ModelAndView showUpdateForm(@RequestParam Long richiestaId) {
             ModelAndView mav = new ModelAndView("add-richiesta-form");
-            Richiesta richiesta = rRepo.findById(richiestaId).get();
+            com.example.locoweb.entity.Richiesta richiesta = rRepo.findById(richiestaId).get();
             mav.addObject("richiesta", richiesta);
             return mav;
         }

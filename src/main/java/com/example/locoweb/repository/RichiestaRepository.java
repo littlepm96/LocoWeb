@@ -1,4 +1,4 @@
-package com.example.locoweb.repository;
+package com.example.locoweb.Repository;
 
 import com.example.locoweb.entity.Richiesta;
 import org.springframework.data.jpa.repository.JpaRepository;
