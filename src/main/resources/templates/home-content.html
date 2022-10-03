@@ -2615,8 +2615,23 @@
         </div>
     </div>
 </div>
-<!-- News letter area  End -->
-
+<!-- Newsletter area End -->
+<!-- Popup area Start -->
+<div th:if="${success == true}" class="modal" style="z-index: 99;" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-body">
+            <p>Richiesta inserita con successo!</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="alert alert-success w-50 h-50 m-auto fixed-top"></div>
+<div th:if="${success == false}" class="alert alert-danger w-50 h-50 m-auto fixed-top">Errore nell'inserimento della richiesta!</div>
+<!-- Popup area End -->
 </body>
 </html>
 

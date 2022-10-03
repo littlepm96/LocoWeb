@@ -23,13 +23,6 @@ public class AdminController {
         return mav;
     }
 
-    @GetMapping("/addRichiestaForm")
-    public ModelAndView addRichiestaForm() {
-        ModelAndView mav = new ModelAndView("add-richiesta-form");
-        mav.addObject("richiesta", new Richiesta());
-        return mav;
-    }
-
     @GetMapping("/showUpdateForm")
     public ModelAndView showUpdateForm(@RequestParam Long richiestaId) {
         ModelAndView mav = new ModelAndView("add-richiesta-form");

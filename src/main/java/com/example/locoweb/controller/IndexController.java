@@ -1,5 +1,7 @@
 package com.example.locoweb.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,20 +12,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.locoweb.repository.RichiestaRepository;
 import com.example.locoweb.entity.Richiesta;
+import com.example.locoweb.repository.RichiestaRepository;
+import com.example.locoweb.utils.AppConstants;
 
 @Controller
 public class IndexController {
     @Autowired
-    UserDetailsService uService;
-
-    @Autowired
     private RichiestaRepository rRepo;
 
+    @Autowired
+    UserDetailsService uService;
+
     @GetMapping({"/"})
-    public ModelAndView getIndex() {
+    public ModelAndView getIndex(@RequestParam Optional<Boolean> success) {
         ModelAndView mav = new ModelAndView("index");
+        
+        if(success.isPresent()) {
+            if(success.get() == true) {
+                mav.addObject("success", true);
+            } else {
+                mav.addObject("success", false);
+            }
+        }
+
         return mav;
     }
 
@@ -39,17 +51,28 @@ public class IndexController {
     ) {
         UserDetails user = uService.loadUserByUsername("admin");
         
-        if(user.getPassword().equals("123")) {
+        if(user.getPassword().equals(AppConstants.ADMIN_PW)) {
             return "redirect:/admin/list";
         } else {
             return "redirect:/login?error=";
         }
     }
 
+    @GetMapping("/addRichiestaForm")
+    public ModelAndView addRichiestaForm() {
+        ModelAndView mav = new ModelAndView("add-richiesta-form");
+        mav.addObject("richiesta", new Richiesta());
+        return mav;
+    }
+
     @PostMapping("/saveRichiesta")
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
-        rRepo.save(richiesta);
-        return "redirect:/admin/list";
+        try {
+            rRepo.save(richiesta);
+            return "redirect:/?success=true";
+        } catch(IllegalArgumentException e) {
+            return "redirect:/?success=false";
+        }
     }
 }
 
