@@ -16,23 +16,21 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
     @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
+        return http
             .authorizeRequests()
                 .antMatchers("/admin/**")
                 .access("hasRole('ROLE_ADMIN')")
             .and()
             .formLogin()
                 .loginPage("/login")
+                .loginProcessingUrl("/loginProcessing")
                 .permitAll()
                 .defaultSuccessUrl("/admin/list")
             .and()
-            .exceptionHandling()
-                .accessDeniedPage("/login?accessdenied=")
-            .and()
             .logout()
-                .logoutUrl("/login?logout=");
-                
-        return http.build();
+                .logoutUrl("/login?logout=")
+            .and()
+            .build();
 	}
 
     @Bean
