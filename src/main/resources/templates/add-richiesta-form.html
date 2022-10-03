@@ -15,7 +15,7 @@
 			<h3>Inserisci la tua richiesta</h3>
 			<hr/>
 			
-			<form th:action="@{/saveRichiesta}" th:object="${richiesta}" method="POST">
+			<form th:action="@{/admin/saveRichiesta}" th:object="${richiesta}" method="POST">
 				
 				<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
 				
