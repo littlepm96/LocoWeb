@@ -1,4 +1,4 @@
-package com.example.locoweb.controller;
+/*package com.example.locoweb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,4 +31,4 @@ public class LoginController {
             return "redirect:/login?error=";
         }
     }
-}
+}*/
