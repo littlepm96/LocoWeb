@@ -18,7 +18,7 @@ public class Richiesta {
         private String nome;
         private String cognome;
         private String email;
-        private int cellulare;
+        private long cellulare;
         private String descrizione;
 
         public Long getId() {
@@ -53,11 +53,11 @@ public class Richiesta {
                 this.email = email;
         }
 
-        public int getCellulare() {
+        public long getCellulare() {
                 return cellulare;
         }
 
-        public void setCellulare(int cellulare) {
+        public void setCellulare(long cellulare) {
                 this.cellulare = cellulare;
         }
 
