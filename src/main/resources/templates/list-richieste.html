@@ -17,12 +17,13 @@
 		<div class="container">
 		
 			<h3>Lista Richieste</h3>
+			<a th:href="@{/login(logout=)}" class="btn btn-danger">Logout</a>
 			
 			<hr/>
-			<a th:href="@{/addRichiestaForm}" class="btn btn-primary">Aggiungi Richiesta</a>
+
+			<a th:href="@{/admin/addRichiestaForm}" class="btn btn-primary">Aggiungi Richiesta</a>
 			<br/><br/>
 			<table class="table table-bordered table-striped" id="employeeTable">
-			
 				<thead>
 					<tr>
 						<th>Nome</th>
@@ -41,13 +42,12 @@
 						<td th:text="${richiesta.cellulare}" />
 						<td th:text="${richiesta.descrizione}" />
 						<td>
-							<a th:href="@{/showUpdateForm(richiestaId=${richiesta.id})}" class="btn btn-info">Modifica</a>
+							<a th:href="@{/admin/showUpdateForm(richiestaId=${richiesta.id})}" class="btn btn-info">Modifica</a>
 							
-							<a th:href="@{/deleteRichiesta(richiestaId=${richiesta.id})}" class="btn btn-danger ml-2">Elimina</a>
+							<a th:href="@{/admin/deleteRichiesta(richiestaId=${richiesta.id})}" class="btn btn-danger ml-2">Elimina</a>
 						</td>
 					</tr>
 				</tbody>
-				
 			</table>
 		</div>
 		
