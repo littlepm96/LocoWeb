@@ -35,7 +35,7 @@ public class AdminController {
     @PostMapping("/saveRichiesta")
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
         rRepo.save(richiesta);
-        return "redirect:/list";
+        return "redirect:/admin/list";
     }
 
     @GetMapping("/showUpdateForm")
@@ -49,6 +49,6 @@ public class AdminController {
     @GetMapping("/deleteRichiesta")
     public String deleteRichiesta(@RequestParam Long richiestaId) {
         rRepo.deleteById(richiestaId);
-        return "redirect:/list";
+        return "redirect:/admin/list";
     }
 }
