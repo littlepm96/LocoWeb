@@ -8,7 +8,7 @@
 			    color: #999;
 			    margin-right: 30px;
 			    position:relative;
-			    &:before{
+			    /*&:before{
 			    	position: absolute;
 				    top: -8px;
 				    left: 34px;
@@ -34,7 +34,7 @@
 					    top: 0px;
 					    left: 27px;
 			    	}
-			    }
+			    }*/
 			    @media #{$small-mobile}{
 			    	margin-right:15px;
 			    }
