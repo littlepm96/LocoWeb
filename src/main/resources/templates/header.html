@@ -8,50 +8,18 @@
     <div class="container">
       <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
         <div class="header-static-nav">
-          <a href="mailto:yourname@email.com">yourname@email.com</a>
+          <a href="mailto:coop.locomotiva@libero.it" th:href="#{home.email}" th:text="#{home.email}">coop.locomotiva@libero.it</a>
         </div>
         <div class="header-menu-nav">
-          <ul class="menu-nav">
+          <ul>
             <li>
               <div class="dropdown">
                 <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown"
-                        id="dropdownMenuButton" type="button">My Account <i
+                        id="dropdownMenuButton" type="button">Amministrazione <i
                         class="ion-ios-arrow-down"></i></button>
 
                 <ul aria-labelledby="dropdownMenuButton" class="dropdown-menu animation slideDownIn">
-                  <li><a href="my-account.html">My account</a></li>
-                  <li><a href="checkout.html">Checkout</a></li>
-                  <li><a href="login.html">Sign in</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown">
-                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown"
-                        id="dropdownMenuButton-2" type="button">USD $ <i
-                        class="ion-ios-arrow-down"></i></button>
-
-                <ul aria-labelledby="dropdownMenuButton-2" class="dropdown-menu animation slideDownIn">
-                  <li><a href="#">EUR €</a></li>
-                  <li><a href="#">USD $</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="pr-0">
-              <div class="dropdown">
-                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown"
-                        id="dropdownMenuButton-3" type="button">
-                  <img alt="" th:src="@{/assets/images/flag/1.jpg}"/> English <i
-                        class="ion-ios-arrow-down"></i>
-                </button>
-
-                <ul aria-labelledby="dropdownMenuButton-3" class="dropdown-menu animation slideDownIn">
-                  <li>
-                    <a href="#"><img alt="" th:src="@{/assets/images/flag/1.jpg}"/> English</a>
-                  </li>
-                  <li>
-                    <a href="#"><img alt="" th:src="@{/assets/images/flag/2.jpg}"/> Français</a>
-                  </li>
+                  <li><a th:href=@{/login}>Login</a></li>
                 </ul>
               </div>
             </li>
@@ -66,135 +34,24 @@
       <div class="row">
         <div class="col-md-3 d-flex">
           <div class="logo align-self-center">
-            <a href="index.html"><img alt="logo.jpg" class="img-responsive"
-                                      th:src="@{/assets/images/logo/logo.jpg}"/></a>
+            <a href="index.html"><img alt="Fondazione Varrone" class="img-responsive"
+                                      th:src="@{/assets/images/logo/logo-fondazione-varrone.png}"/></a>
           </div>
         </div>
-        <div class="col-md-9 align-self-center">
-          <div class="header-right-element d-flex">
-            <div class="search-element media-body mr-20px">
-              <form action="#" class="d-flex">
-                <div class="search-category">
-                  <select>
-                    <option value="0">All categories</option>
-                    <option value="12">Laptop</option>
-                    <option value="13">- - Hot Categories</option>
-                    <option value="19">- - - - Dresses</option>
-                    <option value="20">- - - - Jackets &amp; Coats</option>
-                    <option value="21">- - - - Sweaters</option>
-                    <option value="22">- - - - Jeans</option>
-                    <option value="23">- - - - Blouses &amp; Shirts</option>
-                    <option value="14">- - Outerwear &amp; Jackets</option>
-                    <option value="24">- - - - Basic Jackets</option>
-                    <option value="25">- - - - Real Fur</option>
-                    <option value="26">- - - - Down Coats</option>
-                    <option value="27">- - - - Blazers</option>
-                    <option value="28">- - - - Trench Coats</option>
-                    <option value="15">- - Weddings &amp; Events</option>
-                    <option value="29">- - - - Wedding Dresses</option>
-                    <option value="30">- - - - Evening Dresses</option>
-                    <option value="31">- - - - Prom Dresses</option>
-                    <option value="32">- - - - Bridesmaid Dresses</option>
-                    <option value="33">- - - - Wedding Accessories</option>
-                    <option value="16">- - Bottoms</option>
-                    <option value="34">- - - - Skirts</option>
-                    <option value="35">- - - - Leggings</option>
-                    <option value="36">- - - - Pants &amp; Capris</option>
-                    <option value="37">- - - - Wide Leg Pants</option>
-                    <option value="38">- - - - Shorts</option>
-                    <option value="17">- - Tops &amp; Sets</option>
-                    <option value="39">- - - - Tank Tops</option>
-                    <option value="40">- - - - Suits &amp; Sets</option>
-                    <option value="41">- - - - Jumpsuits</option>
-                    <option value="42">- - - - Rompers</option>
-                    <option value="43">- - - - Sleep &amp; Lounge</option>
-                    <option value="18">- - Accessories</option>
-                    <option value="44">- - - - Eyewear &amp; Accessories</option>
-                    <option value="45">- - - - Hats &amp; Caps</option>
-                    <option value="46">- - - - Belts &amp; Cummerbunds</option>
-                    <option value="47">- - - - Scarves &amp; Wraps</option>
-                    <option value="48">- - - - Gloves &amp; Mittens</option>
-                    <option value="49">Computer</option>
-                    <option value="50">- - Bottoms</option>
-                    <option value="53">- - - - Skirts</option>
-                    <option value="54">- - - - Leggings</option>
-                    <option value="55">- - - - Jeans</option>
-                    <option value="56">- - - - Pants &amp; Capris</option>
-                    <option value="57">- - - - Shorts</option>
-                    <option value="51">- - Outerwear &amp; Jackets</option>
-                    <option value="58">- - - - Trench</option>
-                    <option value="59">- - - - Genuine Leather</option>
-                    <option value="60">- - - - Parkas</option>
-                    <option value="61">- - - - Down Jackets</option>
-                    <option value="62">- - - - Wool &amp; Blends</option>
-                    <option value="52">- - Underwear &amp; Loungewear</option>
-                    <option value="63">- - - - Boxers</option>
-                    <option value="64">- - - - Briefs</option>
-                    <option value="65">- - - - Long Johns</option>
-                    <option value="66">- - - - Men's Sleep &amp; Lounge</option>
-                    <option value="67">- - - - Pajama Sets</option>
-                    <option value="68">Smartphone</option>
-                    <option value="69">- - Accessories &amp; Parts</option>
-                    <option value="75">- - - - Cables &amp; Adapters</option>
-                    <option value="76">- - - - Batteries</option>
-                    <option value="77">- - - - Chargers</option>
-                    <option value="78">- - - - Bags &amp; Cases</option>
-                    <option value="79">- - - - Electronic Cigarettes</option>
-                    <option value="70">- - Audio &amp; Video</option>
-                    <option value="80">- - - - Televisions</option>
-                    <option value="81">- - - - TV Receivers</option>
-                    <option value="82">- - - - Projectors</option>
-                    <option value="83">- - - - Audio Amplifier Boards</option>
-                    <option value="84">- - - - TV Sticks</option>
-                    <option value="71">- - Camera &amp; Photo</option>
-                    <option value="85">- - - - Digital Cameras</option>
-                    <option value="86">- - - - Camcorders</option>
-                    <option value="87">- - - - Camera Drones</option>
-                    <option value="88">- - - - Action Cameras</option>
-                    <option value="89">- - - - Photo Studio Supplies</option>
-                    <option value="72">- - Portable Audio &amp; Video</option>
-                    <option value="90">- - - - Headphones</option>
-                    <option value="91">- - - - Speakers</option>
-                    <option value="92">- - - - MP3 Players</option>
-                    <option value="93">- - - - VR/AR Devices</option>
-                    <option value="94">- - - - Microphones</option>
-                    <option value="73">- - Smart Electronics</option>
-                    <option value="95">- - - - Wearable Devices</option>
-                    <option value="96">- - - - Smart Home Appliances</option>
-                    <option value="97">- - - - Smart Remote Controls</option>
-                    <option value="98">- - - - Smart Watches</option>
-                    <option value="99">- - - - Smart Wristbands</option>
-                    <option value="74">- - Video Games</option>
-                    <option value="100">- - - - Handheld Game Players</option>
-                    <option value="101">- - - - Game Controllers</option>
-                    <option value="102">- - - - Joysticks</option>
-                    <option value="103">- - - - Stickers</option>
-                    <option value="104">Game Consoles</option>
-                    <option value="105">Mp3 &amp; headphone</option>
-                    <option value="106">Tv &amp; Video</option>
-                    <option value="107">Watches</option>
-                    <option value="108">Washing Machine</option>
-                    <option value="109">Camera</option>
-                    <option value="110">Audio &amp; Theater</option>
-                    <option value="111">Accessories</option>
-                    <option value="112">Games &amp; Consoles</option>
-                  </select>
-                </div>
-                <input placeholder="Enter your search key ... " type="text"/>
-                <button>Search</button>
-              </form>
-            </div>
-            <!--Cart info Start -->
-            <div class="header-tools d-flex">
-              <div class="cart-info d-flex align-self-center">
-                <a class="heart offcanvas-toggle" href="#offcanvas-wishlist"><i
-                        class="lnr lnr-heart"></i><span>Wishlist</span></a>
-                <a class="bag offcanvas-toggle" href="#offcanvas-cart"><i
-                        class="lnr lnr-cart"></i><span>My Cart</span></a>
-              </div>
-            </div>
+        <div class="col-md-3 d-flex">
+          <div class="logo align-self-center">
+            <a href="index.html"><img alt="Loco Motiva" class="img-responsive"
+                                    height="100px" th:src="@{/assets/images/logo/loco-motiva.jpg}" width="100px"/></a>
           </div>
-          <!--Cart info End -->
+        </div>
+        <div class="col-md-3 d-flex">
+          <!--spazio-->
+        </div>
+        <div class="header-menu-nav col-md-3 d-flex">
+          <ul class="menu-nav align-self-center">
+            <li><a href="prenota.html">Prenotazioni</a></li>
+            <li><a href="contacts.html">Contattaci</a></li>
+          </ul>
         </div>
       </div>
     </div>
