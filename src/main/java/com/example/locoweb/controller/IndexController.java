@@ -18,6 +18,7 @@ import com.example.locoweb.utils.AppConstants;
 
 @Controller
 public class IndexController {
+
     @Autowired
     private RichiestaRepository rRepo;
 
@@ -50,7 +51,6 @@ public class IndexController {
         @RequestParam String password
     ) {
         UserDetails user = uService.loadUserByUsername("admin");
-        
         if(user.getPassword().equals(AppConstants.ADMIN_PW)) {
             return "redirect:/admin/list";
         } else {
