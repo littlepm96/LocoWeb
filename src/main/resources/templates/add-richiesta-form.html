@@ -15,25 +15,33 @@
 	<h3>Inserisci la tua richiesta</h3>
 	<hr/>
 
-	<form th:action="@{/saveRichiesta}" th:object="${richiesta}" method="POST">
-
-		<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
-
-		<input type="text" th:field="*{cognome}" class="form-control col-4 mb-4" placeholder="inserisci cognome" />
-
-		<input type="text" th:field="*{email}" class="form-control col-4 mb-4" placeholder="inserisci email" />
-
-		<input type="text" th:field="*{cellulare}" class="form-control col-4 mb-4" placeholder="inserisci cellulare" />
-
-		<input type="text" maxlength="200" th:field="*{descrizione}" class="form-control col-4 mb-4" placeholder="spiegaci la tua necessità (max 200 caratteri)" />
+	<form th:action="@{/admin/saveRichiesta}" th:object="${richiesta}" method="POST">
+		<div class="form-group">
+			<label>Nome</label>
+			<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
+		</div>
+		<div class="form-group">
+			<label> Cognome </label>
+			<input type="text" th:field="*{cognome}" class="form-control col-4 mb-4" placeholder="inserisci cognome" />
+		</div>
+		<div class="form-group">
+			<label> Email </label>
+			<input type="text" th:field="*{email}" class="form-control col-4 mb-4" placeholder="inserisci email" />
+		</div>
+		<div class="form-group">
+			<label> Cellulare </label>
+			<input type="text" th:field="*{cellulare}" class="form-control col-4 mb-4" placeholder="inserisci cellulare" />
+		</div>
+		<div class="form-group">
+			<label> Descrizione </label>
+			<input type="text" maxlength="200" th:field="*{descrizione}" class="form-control col-4 mb-4" placeholder="inserisci richiesta" />
+		</div>
 
 		<button type="submit" class="btn btn-primary col-2">Inoltra Form</button>
 		<input type="hidden" th:field="*{id}" />
-
 	</form>
 	<hr/>
 	<a th:href="@{/}">Back to homepage</a>
 </div>
-
 </body>
 </html>
