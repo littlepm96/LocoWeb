@@ -19,7 +19,6 @@
 		<div class="form-group">
 			<label>Nome</label>
 			<input type="text" th:field="*{nome}" class="form-control col-4 mb-4" placeholder="inserisci nome" />
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 		</div>
 		<div class="form-group">
 			<label> Cognome </label>
@@ -41,10 +40,8 @@
 		<button type="submit" class="btn btn-primary col-2">Inoltra Form</button>
 		<input type="hidden" th:field="*{id}" />
 	</form>
-	
 	<hr/>
 	<a th:href="@{/admin/list}">Back to list</a>
 </div>
-
 </body>
 </html>
