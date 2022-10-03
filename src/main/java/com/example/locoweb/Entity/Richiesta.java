@@ -1,4 +1,4 @@
-package com.example.locoweb.Entity;
+package com.example.locoweb.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +20,6 @@ public class Richiesta {
         private String email;
         private int cellulare;
         private String descrizione;
-
 
         public Long getId() {
                 return id;
