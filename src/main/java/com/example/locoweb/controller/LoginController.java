@@ -1,5 +1,6 @@
 package com.example.locoweb.controller;
 
+import com.example.locoweb.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -23,9 +24,9 @@ public class LoginController {
         @RequestParam String username,
         @RequestParam String password
     ) {
-        UserDetails user = uService.loadUserByUsername("admin");
+        UserDetails user = uService.loadUserByUsername(AppConstants.ADMIN_USER);
         
-        if(user.getPassword().equals("123")) {
+        if(user.getPassword().equals(AppConstants.ADMIN_PW)) {
             return "redirect:/admin/list";
         } else {
             return "redirect:/login?error=";

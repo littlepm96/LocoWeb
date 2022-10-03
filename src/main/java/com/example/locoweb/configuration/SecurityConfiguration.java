@@ -1,5 +1,6 @@
 package com.example.locoweb.configuration;
 
+import com.example.locoweb.utils.AppConstants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -37,8 +38,8 @@ public class SecurityConfiguration {
 	public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User
-            .withUsername("admin")
-            .password(encoder().encode("123"))
+            .withUsername(AppConstants.ADMIN_USER)
+            .password(encoder().encode(AppConstants.ADMIN_PW))
             .roles("USER", "ADMIN")
             .build());
 
