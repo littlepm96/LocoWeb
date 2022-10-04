@@ -26,16 +26,16 @@ public class IndexController {
     UserDetailsService uService;
 
     @GetMapping({"/"})
-    public ModelAndView getIndex(@RequestParam Optional<Boolean> success) {
+    public ModelAndView getIndex(/* @RequestParam Optional<Boolean> success */) {
         ModelAndView mav = new ModelAndView("index");
         
-        if(success.isPresent()) {
+        /* if(success.isPresent()) {
             if(success.get() == true) {
                 mav.addObject("success", true);
             } else {
                 mav.addObject("success", false);
             }
-        }
+        } */
 
         return mav;
     }
@@ -59,9 +59,18 @@ public class IndexController {
     }
 
     @GetMapping("/addRichiestaForm")
-    public ModelAndView addRichiestaForm() {
+    public ModelAndView addRichiestaForm(@RequestParam Optional<Boolean> success) {
         ModelAndView mav = new ModelAndView("add-richiesta-form");
+
         mav.addObject("richiesta", new Richiesta());
+        if(success.isPresent()) {
+            if(success.get()) {
+                mav.addObject("success", true);
+            } else {
+                mav.addObject("success", false);
+            }
+        }
+
         return mav;
     }
 
@@ -69,9 +78,11 @@ public class IndexController {
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
         try {
             rRepo.save(richiesta);
-            return "redirect:/?success=true";
+            // return "redirect:/?success=true";
+            return "redirect:/addRichiestaForm?success=true";
         } catch(IllegalArgumentException e) {
-            return "redirect:/?success=false";
+            // return "redirect:/?success=false";
+            return "redirect:/addRichiestaForm?success=false";
         }
     }
 }
