@@ -78,10 +78,8 @@ public class IndexController {
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
         try {
             rRepo.save(richiesta);
-            // return "redirect:/?success=true";
             return "redirect:/addRichiestaForm?success=true";
         } catch(IllegalArgumentException e) {
-            // return "redirect:/?success=false";
             return "redirect:/addRichiestaForm?success=false";
         }
     }
