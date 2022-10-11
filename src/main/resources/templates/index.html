@@ -1,45 +1,967 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="partials/head::head"></head>
-<body>
-<!--HEADER-->
-<div th:replace="partials/header::header"></div>
-<!--HEADER END-->
-<!--MOBILE HEADER-->
-<div th:replace="partials/header::header-mobile-navbar"></div>
-<div th:replace="partials/header::header-mobile-search"></div>
-<div th:replace="partials/header::header-mobile-category"></div>
-<!--MOBILE HEADER END-->
-<!--OVERLAYS-->
-<div th:replace="partials/header::offcanvas-wishlist"></div>
-<div th:replace="partials/header::offcanvas-cart"></div>
-<div th:replace="partials/header::offcanvas-search"></div>
-<div th:replace="partials/header::offcanvas-overlay"></div>
-<!--OVERLAYS END-->
-<!--++++++CONTENT++++++-->
-<div th:replace="partials/home-content::slider"></div>
-<div th:replace="partials/home-content::static-area"></div>
-<div th:replace="partials/home-content::feature-area"></div>
-<div th:replace="partials/home-content::banner-area"></div>
-<div th:replace="partials/home-content::best-area"></div>
-<div th:replace="partials/home-content::banner-area-2"></div>
-<div th:replace="partials/home-content::arrival-area"></div>
-<div th:replace="partials/home-content::banner-area-3"></div>
-<div th:replace="partials/home-content::category-slider"></div>
-<div th:replace="partials/home-content::brand"></div>
-<div th:replace="partials/home-content::category"></div>
-<div th:replace="partials/home-content::newsletter"></div>
-<!--++++++CONTENT END++++++-->
-<!--FOOTER-->
-<div th:replace="partials/footer::footer"></div>
-<!--FOOTER END-->
-<!--MODAL-->
-<div th:replace="partials/footer::modal"></div>
-<!--MODAL END-->
-<!--SCRIPTS-->
-<div th:replace="partials/footer::scripts"></div>
-<!--SCRIPTS END-->
+<html lang="it-IT" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Progetto Loco Motiva</title>
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/">
+    <link rel="dns-prefetch" href="https://s.w.org/">
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.cnapp.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.9"}};
+        !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script><script th:src="@{/assets/wp-emoji-release.min.js}" type="text/javascript" defer=""></script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" th:href="@{/assets/style.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="otter-blocks-css" th:href="@{/assets/blocks.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="wpdm-font-awesome-css" th:href="@{/assets/all.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="wpdm-front-bootstrap-css" th:href="@{/assets/bootstrap.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="wpdm-front-css" th:href="@{/assets/front.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="dashicons-css" th:href="@{/assets/dashicons.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-0-css" th:href="@{/assets/font-awesome.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-1-css" th:href="@{/assets/public.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="neve-style-css" th:href="@{/assets/style.min1.css}" type="text/css" media="all">
+    <style id="neve-style-inline-css" type="text/css">
+        .header-menu-sidebar-inner li.menu-item-nav-search { display: none; }
+        .container{ max-width: 748px; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"]{ max-width:718px;margin:auto } .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */ ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ background-color: var(--nv-primary-accent);color: #ffffff;border-radius:3px;border:none;border-width:1px 1px 1px 1px; } .button.button-primary:hover, ul[id^="nv-primary-navigation"] li.button.button-primary > a:hover, .menu li.button.button-primary > a:hover, .wp-block-button.is-style-primary .wp-block-button__link:hover, .wc-block-grid .wp-block-button .wp-block-button__link:hover, form input[type="submit"]:hover, form button[type="submit"]:hover, #comments input[type="submit"]:hover{ background-color: var(--nv-primary-accent);color: #ffffff; } .button.button-secondary, .cart-off-canvas .button.nv-close-cart-sidebar, .wp-block-button.is-style-secondary .wp-block-button__link{ background-color: rgba(0,0,0,0);color: var(--nv-text-color);border-radius:3px;border:1px solid;border-width:1px 1px 1px 1px; } .button.button-secondary:hover, .cart-off-canvas .button.nv-close-cart-sidebar:hover, .wp-block-button.is-style-secondary .wp-block-button__link:hover{ background-color: rgba(0,0,0,0);color: var(--nv-text-color); } form:not([role="search"]):not(.woocommerce-cart-form):not(.woocommerce-ordering):not(.cart) input:read-write:not(#coupon_code), form textarea, form select{ margin-bottom: 10px; } form input:read-write, form textarea, form select, form select option, form.wp-block-search input.wp-block-search__input{ color: var(--nv-text-color); } form label, .wpforms-container .wpforms-field-label{ margin-bottom: 10px; } form.search-form input:read-write{ padding-right:45px !important; } .header-main-inner,.header-main-inner a:not(.button),.header-main-inner .navbar-toggle{ color: var(--nv-text-color); } .header-main-inner .nv-icon svg,.header-main-inner .nv-contact-list svg{ fill: var(--nv-text-color); } .header-main-inner .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-main-inner .nav-ul .sub-menu{ background-color: #ffffff; } .hfg_header .header-main-inner{ background-color: #ffffff; } .header-menu-sidebar .header-menu-sidebar-bg,.header-menu-sidebar .header-menu-sidebar-bg a:not(.button),.header-menu-sidebar .header-menu-sidebar-bg .navbar-toggle{ color: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .nv-icon svg,.header-menu-sidebar .header-menu-sidebar-bg .nv-contact-list svg{ fill: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg .nav-ul .sub-menu{ background-color: #ffffff; } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg{ background-color: #ffffff; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 120px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle, .header-menu-sidebar .close-sidebar-panel .navbar-toggle{ border-radius:3px;border:1px solid;border-width:1px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret{ color: var(--nv-text-color); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a:after,.builder-item--primary-menu .nav-menu-primary > .nav-ul li > .has-caret > a:after{ background-color: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item):hover > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret{ color: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret svg{ fill: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > .has-caret > a{ color: var(--nv-primary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > .has-caret svg{ fill: var(--nv-primary-accent); } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .footer-bottom-inner{ background-color: #24292e; } .footer-bottom-inner,.footer-bottom-inner a:not(.button),.footer-bottom-inner .navbar-toggle{ color: var(--nv-text-color); } .footer-bottom-inner .nv-icon svg,.footer-bottom-inner .nv-contact-list svg{ fill: var(--nv-text-color); } .footer-bottom-inner .icon-bar{ background-color: var(--nv-text-color); } .footer-bottom-inner .nav-ul .sub-menu{ background-color: #24292e; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } @media(min-width: 576px){ .container{ max-width: 992px; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 120px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }@media(min-width: 960px){ .container{ max-width: 1170px; } #content .container .col, #content .container-fluid .col{ max-width: 70%; } .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid .alignfull > [class*="__inner-container"], .container-fluid .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .nv-sidebar-wrap, .nv-sidebar-wrap.shop-sidebar{ max-width: 30%; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 85px; } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart) > a:after{ left:-10px;right:-10px } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }.nv-content-wrap .elementor a:not(.button):not(.wp-block-file__button){ text-decoration: none; }:root{--nv-primary-accent:#0366d6;--nv-secondary-accent:#0e509a;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#393939;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}
+        :root{--e-global-color-nvprimaryaccent:#0366d6;--e-global-color-nvsecondaryaccent:#0e509a;--e-global-color-nvsitebg:#;--e-global-color-nvlightbg:#ededed;--e-global-color-nvdarkbg:#14171c;--e-global-color-nvtextcolor:#393939;--e-global-color-nvtextdarkbg:#ffffff;--e-global-color-nvc1:#77b978;--e-global-color-nvc2:#f37262;}
+    </style>
+    <link rel="stylesheet" id="elementor-icons-css" th:href="@{/assets/elementor-icons.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-legacy-css" th:href="@{/assets/frontend-legacy.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" th:href="@{/assets/frontend.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-759-css" th:href="@{/assets/post-759.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="font-awesome-css" th:href="@{/assets/font-awesome.min1.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-global-css" th:href="@{/assets/global.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-91-css" th:href="@{/assets/post-91.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" th:href="@{/assets/css.css}" type="text/css" media="all">
+    <script type="text/javascript" th:src="@{/assets/jquery.min.js}" id="jquery-core-js"></script>
+    <script type="text/javascript" th:src="@{/assets/jquery-migrate.min.js}" id="jquery-migrate-js"></script>
+    <script type="text/javascript" th:src="@{/assets/popper.min.js}" id="wpdm-poper-js"></script>
+    <script type="text/javascript" th:src="@{/assets/bootstrap.min.js}" id="wpdm-front-bootstrap-js"></script>
+    <script type="text/javascript" id="wpdm-frontjs-js-extra">
+        /* <![CDATA[ */
+        var wpdm_url = {"home":"https:\/\/www.cnapp.it\/","site":"https:\/\/www.cnapp.it\/","ajax":"https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php"};
+        var wpdm_js = {"spinner":"<i class=\"fas fa-sun fa-spin\"><\/i>"};
+        /* ]]> */
+    </script>
+    <script type="text/javascript" th:src="@{/assets/front.js}" id="wpdm-frontjs-js"></script>
+    <link rel="https://api.w.org/" href="https://www.cnapp.it/wp-json/"><link rel="alternate" type="application/json" href="https://www.cnapp.it/wp-json/wp/v2/pages/91"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cnapp.it/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cnapp.it/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.6.9">
+    <link rel="canonical" href="https://www.cnapp.it/">
+    <link rel="shortlink" href="https://www.cnapp.it/">
+    <link rel="alternate" type="application/json+oembed" href="https://www.cnapp.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cnapp.it%2F">
+    <link rel="alternate" type="text/xml+oembed" href="https://www.cnapp.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cnapp.it%2F&amp;format=xml">
+    <!-- Enter your scripts here --><link rel="icon" href="https://www.cnapp.it/wp-content/uploads/2019/03/logo-150x150.png" sizes="32x32">
+    <link rel="icon" th:href="@{/assets/logo.png}" sizes="192x192">
+    <link rel="apple-touch-icon" th:href="@{/assets/logo.png}">
+    <meta name="msapplication-TileImage" content="https://www.cnapp.it/wp-content/uploads/2019/03/logo.png">
+    <style id="wp-custom-css">
+        .nv-navbar {
+            background:#fff;
+            height:80px;
+            z-index:170;
+            margin:0 auto;
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            text-align: center;
+        }
+    </style>
+    <meta name="generator" content="WordPress Download Manager 3.2.57">
+    <link th:href="@{/assets/css1.css}" rel="stylesheet">
+    <style>
+        .w3eden .fetfont,
+        .w3eden .btn,
+        .w3eden .btn.wpdm-front h3.title,
+        .w3eden .wpdm-social-lock-box .IN-widget a span:last-child,
+        .w3eden #xfilelist .panel-heading,
+        .w3eden .wpdm-frontend-tabs a,
+        .w3eden .alert:before,
+        .w3eden .panel .panel-heading,
+        .w3eden .discount-msg,
+        .w3eden .panel.dashboard-panel h3,
+        .w3eden #wpdm-dashboard-sidebar .list-group-item,
+        .w3eden #package-description .wp-switch-editor,
+        .w3eden .w3eden.author-dashbboard .nav.nav-tabs li a,
+        .w3eden .wpdm_cart thead th,
+        .w3eden #csp .list-group-item,
+        .w3eden .modal-title {
+            font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .w3eden #csp .list-group-item {
+            text-transform: unset;
+        }
 
 
-</body>
-</html>
+    </style>
+    <style>
+        /* WPDM Link Template Styles */        </style>
+    <style>
+
+        :root {
+            --color-primary: #4a8eff;
+            --color-primary-rgb: 74, 142, 255;
+            --color-primary-hover: #4a8eff;
+            --color-primary-active: #4a8eff;
+            --color-secondary: #4a8eff;
+            --color-secondary-rgb: 74, 142, 255;
+            --color-secondary-hover: #4a8eff;
+            --color-secondary-active: #4a8eff;
+            --color-success: #18ce0f;
+            --color-success-rgb: 24, 206, 15;
+            --color-success-hover: #4a8eff;
+            --color-success-active: #4a8eff;
+            --color-info: #2CA8FF;
+            --color-info-rgb: 44, 168, 255;
+            --color-info-hover: #2CA8FF;
+            --color-info-active: #2CA8FF;
+            --color-warning: #f29e0f;
+            --color-warning-rgb: 242, 158, 15;
+            --color-warning-hover: orange;
+            --color-warning-active: orange;
+            --color-danger: #ff5062;
+            --color-danger-rgb: 255, 80, 98;
+            --color-danger-hover: #ff5062;
+            --color-danger-active: #ff5062;
+            --color-green: #30b570;
+            --color-blue: #0073ff;
+            --color-purple: #8557D3;
+            --color-red: #ff5062;
+            --color-muted: rgba(69, 89, 122, 0.6);
+            --wpdm-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .wpdm-download-link.btn.btn-primary {
+            border-radius: 4px;
+        }
+
+
+    </style>
+    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"></head>
+
+<body class="home page-template page-template-page-templates page-template-template-pagebuilder-full-width page-template-page-templatestemplate-pagebuilder-full-width-php page page-id-91 wp-custom-logo nv-sidebar-full-width menu_sidebar_slide_left elementor-default elementor-kit-759 elementor-page elementor-page-91 e--ua-blink e--ua-chrome e--ua-webkit" id="neve_body" data-elementor-device-mode="desktop">
+<div class="wrapper">
+    <header class="header" role="banner">
+        <a class="neve-skip-link show-on-focus" href="/#content" tabindex="0">Vai al contenuto</a>
+        <div id="header-grid" class="hfg_header site-header">
+            <nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="desktop">
+                <div class="header--row-inner header-main-inner">
+                    <div class="container">
+                        <div class="row row--wrapper" data-section="hfg_header_layout_main">
+                            <div class="builder-item hfg-item-first col-4 col-md-4 col-sm-4 desktop-left tablet-left mobile-left">
+                                <div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+                                    <div class="site-logo">
+                                        <a class="brand" href="https://www.fondazionevarrone.it/" title="Fondazione Varrone" aria-label="Fondazione Varrone">
+                                            <div class="title-with-logo">
+                                                <img th:src="@{/assets/logo-fondazione-varrone.png}" alt="Fondazione Varrone">
+                                            </div>
+                                        </a>
+                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva" aria-label="Loco Motiva">
+                                            <div class="title-with-logo">
+                                                <img th:src="@{/assets/loco-motiva.jpg}" alt="Loco Motiva">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="builder-item has-nav hfg-item-last col-8 col-md-8 col-sm-8 desktop-right tablet-left mobile-left">
+                                <div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+                                    <div class="nv-nav-wrap">
+                                        <div role="navigation" class="style-plain nav-menu-primary" aria-label="Menu principale">
+                                            <ul id="nv-primary-navigation-main" class="primary-menu-ul nav-ul">
+                                                <li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a th:href="@{addRichiestaForm}"><i class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenotazione</a></li>
+                                                <li id="menu-item-749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="#contatti"><i class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="mobile">
+                <div class="header--row-inner header-main-inner">
+                    <div class="container">
+                        <div class="row row--wrapper" data-section="hfg_header_layout_main">
+                            <div class="builder-item hfg-item-first col-8 col-md-8 col-sm-8 desktop-left tablet-left mobile-left">
+                                <div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+                                    <div class="site-logo">
+                                        <a class="brand" href="https://www.fondazionevarrone.it/" title="Fondazione Varrone" aria-label="Fondazione Varrone">
+                                            <div class="title-with-logo">
+                                                <img th:src="@{/assets/logo-fondazione-varrone.png}" alt="Fondazione Varrone">
+                                            </div>
+                                        </a>
+                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva" aria-label="Loco Motiva">
+                                            <div class="title-with-logo">
+                                                <img th:src="@{/assets/loco-motiva.jpg}" alt="Loco Motiva">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="builder-item hfg-item-last col-4 col-md-4 col-sm-4 desktop-right tablet-right mobile-right">
+                                <div class="item--inner builder-item--nav-icon" data-section="header_menu_icon" data-item-id="nav-icon">
+                                    <div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
+                                        <button class="navbar-toggle" aria-label="Menu di navigazione">
+                                            <div class="bars">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </div>
+                                            <span class="screen-reader-text">Navigazione toggle</span>
+                                        </button>
+                                    </div> <!--.navbar-toggle-wrapper-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="header-menu-sidebar" class="header-menu-sidebar menu-sidebar-panel slide_left">
+                <div id="header-menu-sidebar-bg" class="header-menu-sidebar-bg">
+                    <div class="close-sidebar-panel navbar-toggle-wrapper">
+                        <button class="navbar-toggle active" aria-label="
+				Menu di navigazione				">
+                            <div class="bars">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <span class="screen-reader-text">Navigazione toggle</span>
+                        </button>
+                    </div>
+                    <div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner ">
+                        <div class="builder-item has-nav hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-right tablet-left mobile-left">
+                            <div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+                                <div class="nv-nav-wrap">
+                                    <div role="navigation" class="style-plain nav-menu-primary" aria-label="Menu principale">
+                                        <ul id="nv-primary-navigation-sidebar" class="primary-menu-ul nav-ul">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a th:href="@{addRichiestaForm}"><i class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenotazione</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="#contatti"><i class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-sidebar-overlay"></div>
+        </div>
+    </header>
+    <main id="content" class="neve-main" role="main">
+        <div data-elementor-type="wp-post" data-elementor-id="91" class="elementor elementor-91">
+            <div class="elementor-inner">
+                <div class="elementor-section-wrap">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-6bea8fc8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6bea8fc8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c206e1f" data-id="c206e1f" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-19cd67d7 elementor-widget elementor-widget-heading" data-id="19cd67d7" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h1 class="elementor-heading-title elementor-size-default">Centro Studi in Neuroriabilitazione
+                                                        CNAPP Onlus</h1>		</div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-5d916d4a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d916d4a" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1a6c833" data-id="1a6c833" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-4b46d78c elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="4b46d78c" data-element_type="widget" data-widget_type="button.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-button-wrapper">
+                                                                                <a href="https://www.cnapp.it/#attivit" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Attività</span>
+		</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-45a6e595" data-id="45a6e595" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-5beccddc elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5beccddc" data-element_type="widget" data-widget_type="button.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-button-wrapper">
+                                                                                <a href="https://www.cnapp.it/#about" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Il Nostro Lavoro</span>
+		</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-d0e634d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d0e634d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e668e57" data-id="e668e57" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-9dbb91e elementor-widget elementor-widget-menu-anchor" data-id="9dbb91e" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="attivit" class="elementor-menu-anchor"></div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7098d01 elementor-widget elementor-widget-heading" data-id="7098d01" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">01</div>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-43eba95 elementor-widget elementor-widget-heading" data-id="43eba95" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Attività del Cnapp</h2>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-29baea3 elementor-widget elementor-widget-heading" data-id="29baea3" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">Interventi, ricerca, formazione, divulgazione di metodologie psico-educative, di
+                                                        inclusione scolastica/sociale, neuroriabilitative e di supporto alla comunicazione.</div>		</div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-cbaded4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cbaded4" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-no">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-198289f" data-id="198289f" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-61cf516 animated-slow elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box animated fadeInLeft" data-id="61cf516" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="image-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.cnapp.it/intervento/"><img width="50" height="50" th:src="@{/assets/neve-user-1.png}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h5 class="elementor-image-box-title"><a href="https://www.cnapp.it/intervento/">Intervento</a></h5><p class="elementor-image-box-description">L’intervento prevede la valutazione iniziale, la formulazione del progetto individualizzato e il monitoraggio degli obiettivi.</p></div></div>		</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-492ec66" data-id="492ec66" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-0bb83c4 animated-slow elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box animated fadeInUp" data-id="0bb83c4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.cnapp.it/formazione/"><img width="54" height="48" th:src="@{/assets/neve-map-1.png}" class="attachment-full size-full" alt="" loading="lazy"></a></figure><div class="elementor-image-box-content"><h5 class="elementor-image-box-title"><a href="https://www.cnapp.it/formazione/">Formazione</a></h5><p class="elementor-image-box-description">Corsi rivolti a professionisti della riabilitazione, insegnanti, operatori, scuole, cooperative o privati </p></div></div>		</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-781f5a7" data-id="781f5a7" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-f615f50 animated-slow elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box animated fadeInDown" data-id="f615f50" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="57" height="55" th:src="@{/assets/neve-smart-experience1.png}" class="attachment-full size-full" alt="" loading="lazy"></figure><div class="elementor-image-box-content"><h5 class="elementor-image-box-title">Progetti</h5><p class="elementor-image-box-description">In Aggiornamento</p></div></div>		</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-dbda6ca" data-id="dbda6ca" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6d05708 animated-slow elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box animated fadeInRight" data-id="6d05708" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="image-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="55" height="50" th:src="@{/assets/neve-phone-1.png}" class="attachment-full size-full" alt="" loading="lazy"></figure><div class="elementor-image-box-content"><h5 class="elementor-image-box-title">Woce ©</h5><p class="elementor-image-box-description">In Aggiornamento</p></div></div>		</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-450d1c77 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="450d1c77" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-72732b06" data-id="72732b06" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-790f6cb elementor-hidden-phone elementor-widget elementor-widget-image" data-id="790f6cb" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-image">
+                                                        <figure class="wp-caption">
+                                                            <img width="1024" height="684" th:src="@{/assets/età.evolutiva.jpg}" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2019/09/età.evolutiva.jpg 1024w, https://www.cnapp.it/wp-content/uploads/2019/09/età.evolutiva-300x200.jpg 300w, https://www.cnapp.it/wp-content/uploads/2019/09/età.evolutiva-768x513.jpg 768w, https://www.cnapp.it/wp-content/uploads/2019/09/età.evolutiva-930x620.jpg 930w" sizes="(max-width: 1024px) 100vw, 1024px">											<figcaption class="widget-image-caption wp-caption-text">Designed by Freepik</figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-76d9e84e animated-slow animated fadeInRight" data-id="76d9e84e" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-1b5a5a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1b5a5a1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7707e49" data-id="7707e49" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-abc5f2a elementor-widget elementor-widget-menu-anchor" data-id="abc5f2a" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div id="about" class="elementor-menu-anchor"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-78e4827 elementor-widget elementor-widget-heading" data-id="78e4827" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-heading-title elementor-size-default">02</div>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-d82c840 elementor-widget elementor-widget-heading" data-id="d82c840" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h2 class="elementor-heading-title elementor-size-default">Chi Siamo</h2>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-2eacaafe elementor-widget elementor-widget-text-editor" data-id="2eacaafe" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p class="MsoNormal" style="color: #666666; font-family: Georgia, &#39;Times New Roman&#39;, Times, serif; font-size: 16px;"><span style="font-size: 11pt; font-family: Arial, sans-serif;">Il <strong>Centro Studi in Neuroriabilitazione CNAPP onlus</strong> rivolge e destina la propria attività a soggetti dell’età evolutiva e adulti con disabilità, aventi in prevalenza disturbi che rientrano nei disturbi del neurosviluppo e neurocognitivi secondo il DSM 5.</span></p><p class="MsoNormal" style="color: #666666; font-family: Georgia, &#39;Times New Roman&#39;, Times, serif; font-size: 16px;"><span style="font-size: 11pt; font-family: Arial, sans-serif;">L’associazione pone la persona e la famiglia al centro del percorso di intervento e supporto, offrendo e costruendo, in rete con le persone coinvolte, progetti di intervento individualizzati dall’infanzia all’età adulta, considerando le peculiarità di ogni fase del percorso evolutivo.&nbsp;<br></span></p><p class="MsoNormal" style="color: #666666; font-family: Georgia, &#39;Times New Roman&#39;, Times, serif; font-size: 16px;"><span style="font-size: 11pt; font-family: Arial, sans-serif;">L’associazione attraverso la valutazione della persona disabile e del suo contesto sociale promuove un progetto di intervento individualizzato, che vede la costruzione di una rete tra figure professionali già attive e valuta l’inserimento di ulteriori interventi professionali.</span></p>					</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-15e600a elementor-widget elementor-widget-spacer" data-id="15e600a" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-2f06e7f2 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="2f06e7f2" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ccceedd" data-id="ccceedd" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-473f0410 elementor-widget elementor-widget-spacer" data-id="473f0410" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-360713c" data-id="360713c" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-15a7280c elementor-widget elementor-widget-spacer" data-id="15a7280c" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7a76dcdb" data-id="7a76dcdb" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-3568e0d0 elementor-widget elementor-widget-spacer" data-id="3568e0d0" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-48c23e1" data-id="48c23e1" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-307d891d elementor-widget elementor-widget-spacer" data-id="307d891d" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-538b1a0b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="538b1a0b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5c8940d6" data-id="5c8940d6" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-5a07725 elementor-widget elementor-widget-menu-anchor" data-id="5a07725" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="dettaglio" class="elementor-menu-anchor"></div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-c84ac7d elementor-widget elementor-widget-heading" data-id="c84ac7d" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">03</div>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-101449f6 elementor-widget elementor-widget-heading" data-id="101449f6" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Cnapp in dettaglio</h2>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2949e172 elementor-widget elementor-widget-heading" data-id="2949e172" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">Principali attività e scopi</div>		</div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-53d359a3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53d359a3" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-181a9df5 animated-slow animated fadeInLeft" data-id="181a9df5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-1ad60e3a elementor-widget elementor-widget-heading" data-id="1ad60e3a" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-heading-title elementor-size-default">1</div>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-6a22abe8 elementor-widget elementor-widget-heading" data-id="6a22abe8" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h4 class="elementor-heading-title elementor-size-default">Cosa Facciamo</h4>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-6a0e361f elementor-widget elementor-widget-text-editor" data-id="6a0e361f" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <ul><li>Interventi</li><li>Ricerca</li><li>Formazione</li><li>Divulgazione di metodologie psico-educative, di<br>inclusione scolastica/sociale, neuroriabilitative e di supporto alla comunicazione.</li></ul>					</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3c525bbe" data-id="3c525bbe" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-69f77860 elementor-widget elementor-widget-image" data-id="69f77860" data-element_type="widget" data-widget_type="image.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image">
+                                                                                <img width="800" height="533" th:src="@{/assets/1804.jpg}" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2020/03/1804.jpg 800w, https://www.cnapp.it/wp-content/uploads/2020/03/1804-300x200.jpg 300w, https://www.cnapp.it/wp-content/uploads/2020/03/1804-768x512.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">														</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-b2b4d59 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b2b4d59" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-591cb138 animated-slow nv-ie-width animated fadeInRight" data-id="591cb138" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-1b44dca6 elementor-widget elementor-widget-heading" data-id="1b44dca6" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-heading-title elementor-size-default">2</div>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-1146a21a elementor-widget elementor-widget-heading" data-id="1146a21a" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h4 class="elementor-heading-title elementor-size-default">Consulenza e Sostegno</h4>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-6e8a2ea6 elementor-widget elementor-widget-text-editor" data-id="6e8a2ea6" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p>Colloqui volti alla prevenzione e promozione del benessere della persona. Analisi delle problematiche e del disagio della persona; individuazione e condivisione di obiettivi.</p>					</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74d3d879" data-id="74d3d879" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-47372f34 elementor-widget elementor-widget-image" data-id="47372f34" data-element_type="widget" data-widget_type="image.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image">
+                                                                                <img width="1024" height="683" th:src="@{/assets/Consulenza.Sostegno.Cnapp_.Roma_.jpg}" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2019/12/Consulenza.Sostegno.Cnapp_.Roma_.jpg 1024w, https://www.cnapp.it/wp-content/uploads/2019/12/Consulenza.Sostegno.Cnapp_.Roma_-300x200.jpg 300w, https://www.cnapp.it/wp-content/uploads/2019/12/Consulenza.Sostegno.Cnapp_.Roma_-768x512.jpg 768w, https://www.cnapp.it/wp-content/uploads/2019/12/Consulenza.Sostegno.Cnapp_.Roma_-930x620.jpg 930w" sizes="(max-width: 1024px) 100vw, 1024px">														</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-33330dfd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="33330dfd" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-322c845a animated-slow animated fadeInLeft" data-id="322c845a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-63630398 elementor-widget elementor-widget-heading" data-id="63630398" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-heading-title elementor-size-default">3</div>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-1364b989 elementor-widget elementor-widget-heading" data-id="1364b989" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h4 class="elementor-heading-title elementor-size-default">Informazione e Divulgazione</h4>		</div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-6b2f2605 elementor-widget elementor-widget-text-editor" data-id="6b2f2605" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p>Attività di comunicazione di progetti e ricerche in maniera facile e accessibile</p>					</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5d4df345" data-id="5d4df345" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-a39ea2d elementor-widget elementor-widget-text-editor" data-id="a39ea2d" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p>Designed by Freepik</p>					</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-7571a814 elementor-widget elementor-widget-image" data-id="7571a814" data-element_type="widget" data-widget_type="image.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-image">
+                                                                                <img width="617" height="342" th:src="@{/assets/comunicare_condivisione_fa_crescere.jpg}" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2020/03/comunicare_condivisione_fa_crescere.jpg 617w, https://www.cnapp.it/wp-content/uploads/2020/03/comunicare_condivisione_fa_crescere-300x166.jpg 300w" sizes="(max-width: 617px) 100vw, 617px">														</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-b1b4d17 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b1b4d17" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-56c5dfe" data-id="56c5dfe" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-2efe1fe elementor-widget elementor-widget-menu-anchor" data-id="2efe1fe" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="Blog" class="elementor-menu-anchor"></div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-891db7c elementor-widget elementor-widget-heading" data-id="891db7c" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">4</div>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-319d17a elementor-widget elementor-widget-heading" data-id="319d17a" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Blog</h2>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-c30f3f4 elementor-widget elementor-widget-obfx-posts-grid" data-id="c30f3f4" data-element_type="widget" data-widget_type="obfx-posts-grid.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="obfx-grid"><div class="obfx-grid-container obfx-grid-style-list obfx-grid-mobile-1 obfx-grid-tablet-2 obfx-grid-desktop-3"><div class="obfx-grid-wrapper"><article class="obfx-grid-col"><div class="obfx-grid-col-image"><a href="https://www.cnapp.it/la-solidarieta-sociale-continua/" title="La Solidarietà Sociale continua"><img width="640" height="428" th:src="@{/assets/153436979_266454755043949_4014553972065456469_n.jpg}" class="img-responsive wp-post-image" alt="153436979_266454755043949_4014553972065456469_n" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2021/03/153436979_266454755043949_4014553972065456469_n.jpg 640w, https://www.cnapp.it/wp-content/uploads/2021/03/153436979_266454755043949_4014553972065456469_n-300x201.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></a></div><div class="obfx-grid-col-content">			<h2 class="entry-title obfx-grid-title">
+                                                        <a href="https://www.cnapp.it/la-solidarieta-sociale-continua/" title="La Solidarietà Sociale continua">
+                                                            La Solidarietà Sociale continua				</a>
+                                                    </h2>
+                                                        <div class="entry-meta obfx-grid-meta">
+
+													<span class="obfx-grid-date">
+									<i class="fas fa-calendar"></i>03/11/2021								</span>
+
+                                                        </div>
+                                                        <div class="entry-content obfx-grid-content">
+                                                            Con piacere sosteniamo questa importante iniziativa con il Forum del Terzo Settore Lazio per gli aiuti alimentari e la lotta alle nuove povertà Qui l’articolo…			</div>
+                                                    </div></article></div><div class="obfx-grid-wrapper"><article class="obfx-grid-col"><div class="obfx-grid-col-image"><a href="https://www.cnapp.it/vaccinazione-antisars-cov2-covid-19-per-le-persone-con-disabilita/" title="Vaccinazione antiSARS-CoV2/COVID-19 per le persone con disabilità"><img width="473" height="284" th:src="@{/assets/asmed-covid-vaccini.png}" class="img-responsive wp-post-image" alt="asmed-covid-vaccini" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2021/02/asmed-covid-vaccini.png 473w, https://www.cnapp.it/wp-content/uploads/2021/02/asmed-covid-vaccini-300x180.png 300w" sizes="(max-width: 473px) 100vw, 473px"></a></div><div class="obfx-grid-col-content">			<h2 class="entry-title obfx-grid-title">
+                                                        <a href="https://www.cnapp.it/vaccinazione-antisars-cov2-covid-19-per-le-persone-con-disabilita/" title="Vaccinazione antiSARS-CoV2/COVID-19 per le persone con disabilità">
+                                                            Vaccinazione antiSARS-CoV2/COVID-19 per le persone con disabilità				</a>
+                                                    </h2>
+                                                        <div class="entry-meta obfx-grid-meta">
+
+													<span class="obfx-grid-date">
+									<i class="fas fa-calendar"></i>02/18/2021								</span>
+
+                                                        </div>
+                                                        <div class="entry-content obfx-grid-content">
+                                                            Ringraziamo per il prezioso lavoro l’ASMeD – Associazione per lo studio dell’Assistenza Medica alla Persona con Disabilità – riguardante le priorità e le indicazioni operative…			</div>
+                                                    </div></article></div><div class="obfx-grid-wrapper"><article class="obfx-grid-col"><div class="obfx-grid-col-image obfx-fit-height"><a href="https://www.cnapp.it/solidarieta-sociale/" title="Solidarietà sociale"><img width="1120" height="629" th:src="@{/assets/solidar.jpg}" class="img-responsive wp-post-image" alt="solidar" loading="lazy" srcset="https://www.cnapp.it/wp-content/uploads/2020/12/solidar.jpg 1120w, https://www.cnapp.it/wp-content/uploads/2020/12/solidar-300x168.jpg 300w, https://www.cnapp.it/wp-content/uploads/2020/12/solidar-1024x575.jpg 1024w, https://www.cnapp.it/wp-content/uploads/2020/12/solidar-768x431.jpg 768w" sizes="(max-width: 1120px) 100vw, 1120px"></a></div><div class="obfx-grid-col-content">			<h2 class="entry-title obfx-grid-title">
+                                                        <a href="https://www.cnapp.it/solidarieta-sociale/" title="Solidarietà sociale">
+                                                            Solidarietà sociale				</a>
+                                                    </h2>
+                                                        <div class="entry-meta obfx-grid-meta">
+
+													<span class="obfx-grid-date">
+									<i class="fas fa-calendar"></i>12/07/2020								</span>
+
+                                                        </div>
+                                                        <div class="entry-content obfx-grid-content">
+                                                            In questo momento di grande difficoltà sanitaria ed economica per il nostro paese il 𝗖𝗲𝗻𝘁𝗿𝗼 𝗦𝘁𝘂𝗱𝗶 𝗶𝗻 𝗡𝗲𝘂𝗿𝗼𝗿𝗶𝗮𝗯𝗶𝗹𝗶𝘁𝗮𝘇𝗶𝗼𝗻𝗲 𝗖𝗻𝗮𝗽𝗽 𝗢𝗻𝗹𝘂𝘀 in collaborazione con il 𝗙𝗼𝗿𝘂𝗺…			</div>
+                                                    </div></article></div></div><!-- .obfx-grid-container --></div><!-- .obfx-grid -->		</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-175239c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="175239c6" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-14ce9d5d" data-id="14ce9d5d" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-45762fa elementor-widget elementor-widget-menu-anchor" data-id="45762fa" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="contatti" class="elementor-menu-anchor"></div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-6ebfa1ee elementor-widget elementor-widget-heading" data-id="6ebfa1ee" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">5</div>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7e8c2c75 elementor-widget elementor-widget-heading" data-id="7e8c2c75" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Contattacci</h2>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-44288cb elementor-widget elementor-widget-text-editor" data-id="44288cb" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7d50d4d8 elementor-widget elementor-widget-content_form_contact" data-id="7d50d4d8" data-element_type="widget" id="nv-contact-form" data-widget_type="content_form_contact.default">
+                                                <div class="elementor-widget-container">
+                                                    <form action="https://www.cnapp.it/wp-admin/admin-post.php" method="post" name="content-form-7d50d4d8" id="content-form-7d50d4d8" class="ti-cf-module content-form content-form-contact content_form_contact"><input type="hidden" id="_wpnonce_contact" name="_wpnonce_contact" value="07bf057c30"><input type="hidden" name="_wp_http_referer" value="/"><input type="hidden" name="action" value="content_form_submit"><input type="hidden" name="form-type" value="contact"><input type="hidden" name="form-builder" value="elementor"><input type="hidden" name="post-id" value="91"><input type="hidden" name="form-id" value="7d50d4d8"><fieldset class="content-form-field-text elementor-column elementor-col-50"><label for="data[7d50d4d8][name]"></label><input type="text" name="data[7d50d4d8][name]" id="data[7d50d4d8][name]" placeholder="Nome"></fieldset><fieldset class="content-form-field-email elementor-column elementor-col-50"><label for="data[7d50d4d8][email]"></label><input type="text" name="data[7d50d4d8][email]" id="data[7d50d4d8][email]" placeholder="la tua email"></fieldset><fieldset class="content-form-field-text elementor-column elementor-col-100"><label for="data[7d50d4d8][phone]"></label><input type="text" name="data[7d50d4d8][phone]" id="data[7d50d4d8][phone]" placeholder="oggetto"></fieldset><fieldset class="content-form-field-textarea elementor-column elementor-col-100"><label for="data[7d50d4d8][message]"></label><textarea name="data[7d50d4d8][message]" id="data[7d50d4d8][message]" placeholder="Scrivi" cols="30" rows="5"></textarea></fieldset><fieldset class="submit-form contact"><button type="submit" name="submit" value="submit-contact-7d50d4d8" class="">invia il messaggio</button></fieldset></form>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4335542d elementor-hidden-desktop elementor-widget elementor-widget-html" data-id="4335542d" data-element_type="widget" data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+                                                    <div style="vertical-align: bottom; width: 25% float: left">			<div style="border-bottom: 3px solid #fc5f45; width: 25%;
+ float: left"></div>
+                                                        <div style="border-bottom: 3px solid #38c695; width: 25%;
+ float: left"></div>					<div style="border-bottom: 3px solid #b27cf5; width: 25%;
+ float: left"></div>
+                                                        <div style="border-bottom: 3px solid #feb960; width: 25%;
+ float: left"></div>
+                                                    </div>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-a05ccf5 elementor-widget elementor-widget-html" data-id="a05ccf5" data-element_type="widget" data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+                                                    <style>
+                                                        /*Disable animations on table/mobile*/
+                                                        @media only screen and (max-width : 768px) {
+                                                            .animated, .animated.animated-slow {
+                                                                -webkit-animation-duration: 0s;
+                                                                animation-duration: 0s;
+                                                            }
+                                                            .fadeIn, .fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown {
+                                                                animation-name: none;
+                                                            }
+                                                        }
+
+                                                        /*Fix flexbox IE11 width issue*/
+                                                        @media only screen and (min-width : 991px) {
+                                                            .nv-ie-width .elementor-column-wrap {
+                                                                min-width: 452px;
+                                                            }
+                                                        }
+
+                                                        /*Video section - Remove link color on hover*/
+                                                        #alexis-video-section a:hover, #alexis-video-section a:focus {
+                                                            color: #fff;
+                                                        }
+
+                                                        /*Pricing section - Fixes*/
+                                                        @media only screen and (max-width: 1000px) and (min-width: 480px) {
+                                                            #alexis-pricing-column-width-3 {
+                                                                margin: 0 auto;
+                                                            }
+                                                        }
+
+                                                        @media only screen and (max-width: 1200px) and (min-width: 1000px) {
+                                                            #alexis-pricing-column-width-1 .elementor-element-populated {
+                                                                margin: 0 0 0 -5px;
+                                                            }
+                                                            #alexis-pricing-column-width-2 .elementor-element-populated {
+                                                                margin: 0;
+                                                            }
+                                                            #alexis-pricing-column-width-3 .elementor-element-populated {
+                                                                margin: 0 0 0 5px;
+                                                            }
+                                                        }
+
+                                                        /*Blog section: fix for mobile*/
+
+                                                        @media only screen and (max-width: 1000px) and (min-width: 480px) {
+                                                            #alexis-post-grid .obfx-grid-container .obfx-grid-wrapper {
+                                                                margin: 0 auto;
+                                                            }
+                                                        }
+
+                                                        /*Center subscribe button on mobile*/
+                                                        @media only screen and (max-width : 468px) {
+                                                            #nv-mobile-subscribe .content-form .submit-form {
+                                                                width: initial;
+                                                            }
+                                                        }
+
+                                                        /*Add space to contact form submit button*/
+                                                        #nv-contact-form .content-form .submit-form {
+                                                            margin-top: 20px;
+                                                        }
+
+                                                        /*Center the Form succes/error notice*/
+                                                        #nv-contact-form .content-form-notice {
+                                                            margin: 0 auto;
+                                                        }
+                                                    </style>		</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-e9efe4e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e9efe4e" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7807389 animated fadeInDown" data-id="7807389" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-bf1e7db elementor-widget elementor-widget-menu-anchor" data-id="bf1e7db" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="dove" class="elementor-menu-anchor"></div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-b3baa2d elementor-widget elementor-widget-heading" data-id="b3baa2d" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Dove Siamo</h2>		</div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4181c9a elementor-widget elementor-widget-google_maps" data-id="4181c9a" data-element_type="widget" data-widget_type="google_maps.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-custom-embed">
+                                                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" th:src="@{/assets/maps.html}" title="via Fezzan 41 00199 Roma" aria-label="via Fezzan 41 00199 Roma"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main><!--/.neve-main-->
+
+
+    <footer class="site-footer" id="site-footer">
+        <div class="hfg_footer">
+            <div class="footer--row footer-bottom layout-full-contained" id="cb-row--footer-bottom" data-row-id="bottom" data-show-on="desktop">
+                <div class="footer--row-inner footer-bottom-inner footer-content-wrap">
+                    <div class="container">
+                        <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row " data-section="hfg_footer_layout_bottom">
+                            <div class="builder-item hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-center tablet-center mobile-center hfg-item-v-middle"><div class="item--inner builder-item--footer_copyright" data-section="footer_copyright" data-item-id="footer_copyright">
+                                <div class="component-wrap">
+                                    <p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a></p></div>
+
+                            </div>
+
+                            </div>							</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</div><!--/.wrapper-->
+<script>
+    jQuery(function($){
+
+
+    });
+</script>
+<div id="fb-root"></div>
+<!-- Enter your scripts here --><link rel="stylesheet" id="eaw-elementor-css" th:href="@{/assets/public1.css}" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-5-css" th:href="@{/assets/all.min1.css}" type="text/css" media="all">
+<link rel="stylesheet" id="content-forms-css" th:href="@{/assets/content-forms.css}" type="text/css" media="all">
+<link rel="stylesheet" id="e-animations-css" th:href="@{/assets/animations.min.css}" type="text/css" media="all">
+<script type="text/javascript" th:src="@{/assets/wp-polyfill.min.js}" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wp-polyfill-js-after">
+    ( 'fetch' in window ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript" th:src="@{/assets/i18n.min.js}" id="wp-i18n-js"></script>
+<script type="text/javascript" th:src="@{/assets/jquery.form.min.js}" id="jquery-form-js"></script>
+<script type="text/javascript" id="neve-script-js-extra">
+    /* <![CDATA[ */
+    var NeveProperties = {"ajaxurl":"https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php","nonce":"257f66f0d8","isRTL":"","isCustomize":""};
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/assets/frontend.js}" id="neve-script-js" async=""></script>
+<script type="text/javascript" th:src="@{/assets/comment-reply.min.js}" id="comment-reply-js"></script>
+<script type="text/javascript" th:src="@{/assets/wp-embed.min.js}" id="wp-embed-js"></script>
+<script type="text/javascript" th:src="@{/assets/obfx-grid.js}" id="obfx-grid-js-js"></script>
+<script type="text/javascript" id="content-forms-js-extra">
+    /* <![CDATA[ */
+    var contentFormsSettings = {"restUrl":"https:\/\/www.cnapp.it\/wp-json\/content-forms\/v1\/","nonce":"257f66f0d8"};
+    var formStyle = {"formStyle":"style=\"margin-left:0; text-align:left\""};
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/assets/content-forms.js}" id="content-forms-js"></script>
+<script type="text/javascript" th:src="@{/assets/webpack.runtime.min.js}" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" th:src="@{/assets/frontend-modules.min.js}" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" th:src="@{/assets/waypoints.min.js}" id="elementor-waypoints-js"></script>
+<script type="text/javascript" th:src="@{/assets/core.min.js}" id="jquery-ui-core-js"></script>
+<script type="text/javascript" th:src="@{/assets/swiper.min.js}" id="swiper-js"></script>
+<script type="text/javascript" th:src="@{/assets/share-link.min.js}" id="share-link-js"></script>
+<script type="text/javascript" th:src="@{/assets/dialog.min.js}" id="elementor-dialog-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Condividi su Facebook","shareOnTwitter":"Condividi su Twitter","pinIt":"Pinterest","download":"Download","downloadImage":"Scarica immagine","fullscreen":"Schermo intero","zoom":"Zoom","share":"Condividi","playVideo":"Riproduci video","previous":"Precedente","next":"Successivo","close":"Chiudi"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.7.8","is_static":false,"experimentalFeatures":{"e_import_export":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/www.cnapp.it\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":91,"title":"Cnapp%20Onlus%20%E2%80%93%20Centro%20Studi%20in%20Neuroriabilitazione","excerpt":"","featuredImage":false}};
+</script>
+<script type="text/javascript" th:src="@{/assets/frontend.min.js}" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+<script type="text/javascript" th:src="@{/assets/preloaded-modules.min.js}" id="preloaded-modules-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+
+
+
+
+</body></html>
