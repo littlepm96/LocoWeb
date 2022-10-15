@@ -2,7 +2,13 @@ package com.example.locoweb.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -21,6 +27,11 @@ public class Richiesta {
         private long cellulare;
         private String descrizione;
 
+        @Getter
+        @Setter
+        @Transient
+        private static List<Long> deletedIds = new ArrayList<>();
+        
         public Long getId() {
                 return id;
         }

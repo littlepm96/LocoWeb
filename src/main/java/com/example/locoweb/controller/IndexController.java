@@ -28,15 +28,6 @@ public class IndexController {
     @GetMapping({"/"})
     public ModelAndView getIndex(/* @RequestParam Optional<Boolean> success */) {
         ModelAndView mav = new ModelAndView("index");
-        
-        /* if(success.isPresent()) {
-            if(success.get() == true) {
-                mav.addObject("success", true);
-            } else {
-                mav.addObject("success", false);
-            }
-        } */
-
         return mav;
     }
 
@@ -76,8 +67,13 @@ public class IndexController {
 
     @PostMapping("/saveRichiesta")
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
+        if(!Richiesta.getDeletedIds().isEmpty()) {
+            richiesta.setId(Richiesta.getDeletedIds().get(0));
+        }
+
         try {
             rRepo.save(richiesta);
+            Richiesta.getDeletedIds().remove(0);
             return "redirect:/addRichiestaForm?success=true";
         } catch(IllegalArgumentException e) {
             return "redirect:/addRichiestaForm?success=false";

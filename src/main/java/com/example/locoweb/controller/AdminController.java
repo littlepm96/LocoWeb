@@ -34,6 +34,8 @@ public class AdminController {
     @GetMapping("/deleteRichiesta")
     public String deleteRichiesta(@RequestParam Long richiestaId) {
         rRepo.deleteById(richiestaId);
+        Richiesta.getDeletedIds().add(richiestaId);
+
         return "redirect:/admin/list";
     }
 }
