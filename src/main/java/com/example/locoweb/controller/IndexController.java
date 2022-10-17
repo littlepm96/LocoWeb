@@ -70,10 +70,14 @@ public class IndexController {
         if(!Richiesta.getDeletedIds().isEmpty()) {
             richiesta.setId(Richiesta.getDeletedIds().get(0));
         }
-
+        
         try {
             rRepo.save(richiesta);
-            Richiesta.getDeletedIds().remove(0);
+
+            if(Richiesta.getDeletedIds().size() > 0) {
+                Richiesta.getDeletedIds().remove(0);
+            }
+
             return "redirect:/addRichiestaForm?success=true";
         } catch(IllegalArgumentException e) {
             return "redirect:/addRichiestaForm?success=false";
