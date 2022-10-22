@@ -67,8 +67,13 @@ public class IndexController {
 
     @PostMapping("/saveRichiesta")
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
+        if(!Richiesta.getDeletedIds().isEmpty()) {
+            richiesta.setId(Richiesta.getDeletedIds().get(0));
+        }
+        
         try {
             rRepo.save(richiesta);
+
             if(Richiesta.getDeletedIds().size() > 0) {
                 Richiesta.getDeletedIds().remove(0);
             }
