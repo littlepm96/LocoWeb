@@ -1,7 +1,6 @@
 package com.example.locoweb.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,18 +8,28 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="Richieste")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Richiesta {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @GeneratedValue(generator = "richiesta-generator")
+        @GenericGenerator(
+                name = "richiesta-generator",
+                strategy = "com.example.locoweb.hibernate.RichiestaGenerator"
+        )
         private Long id;
+        
         private String nome;
         private String cognome;
         private String email;
