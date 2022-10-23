@@ -56,7 +56,8 @@
         </form>
 
         <hr/>
-        <a class="d-block text-center" th:href="@{/}">Back to homepage</a>
+        <a th:if="${user}" class="d-block text-center" th:href="@{/admin/list}">Torna alla lista di richieste</a>
+        <a th:unless="${user}" class="d-block text-center" th:href="@{/}">Torna alla homepage</a>
 
         <!-- Toast Area Start -->
         <div id="failureToast" class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
