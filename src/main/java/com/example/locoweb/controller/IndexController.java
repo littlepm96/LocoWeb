@@ -2,8 +2,9 @@ package com.example.locoweb.controller;
 
 import java.util.Optional;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,32 +26,40 @@ public class IndexController {
     @Autowired
     UserDetailsService uService;
 
-    @GetMapping({"/"})
-    public ModelAndView getIndex(/* @RequestParam Optional<Boolean> success */) {
+    @GetMapping("/")
+    public ModelAndView getIndex() {
         ModelAndView mav = new ModelAndView("index");
         return mav;
     }
 
     @GetMapping("/login")
-    public String loginPage() {
-        return "login";
-    }
-
-    @PostMapping("/loginProcessing")
-    public String loginProcessing(
-        @RequestParam String username,
-        @RequestParam String password
-    ) {
-        UserDetails user = uService.loadUserByUsername("admin");
-        if(user.getPassword().equals(AppConstants.ADMIN_PW)) {
-            return "redirect:/admin/list";
+    public String loginPage(HttpSession session) {
+        if(session.getAttribute("user") != null) {
+            if((Boolean) session.getAttribute("user") == true)
+                return "redirect:/admin/list";
+            else
+                return "login";
         } else {
-            return "redirect:/login?error=";
+            return "login";
         }
     }
 
+    @PostMapping("/loginProcessing")
+    public boolean loginProcessing(@RequestParam String username, @RequestParam String password) {
+        if(username.equals(AppConstants.ADMIN_USER) && password.equals(AppConstants.ADMIN_PW)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @GetMapping("/logout")
+    public boolean logout() {
+        return true;
+    }
+
     @GetMapping("/addRichiestaForm")
-    public ModelAndView addRichiestaForm(@RequestParam Optional<Boolean> success) {
+    public ModelAndView addRichiestaForm(@RequestParam Optional<Boolean> success, HttpSession session) {
         ModelAndView mav = new ModelAndView("add-richiesta-form");
 
         mav.addObject("richiesta", new Richiesta());
@@ -62,18 +71,22 @@ public class IndexController {
             }
         }
 
+        if(session.getAttribute("user") != null)
+            if((Boolean) session.getAttribute("user") == true)
+                mav.addObject("user", true);
+            else {
+                mav.addObject("user", false);
+        } else {
+            mav.addObject("user", false);
+        }
+
         return mav;
     }
 
     @PostMapping("/saveRichiesta")
     public String saveRichiesta(@ModelAttribute Richiesta richiesta) {
-        if(!Richiesta.getDeletedIds().isEmpty()) {
-            richiesta.setId(Richiesta.getDeletedIds().get(0));
-        }
-        
         try {
             rRepo.save(richiesta);
-
             if(Richiesta.getDeletedIds().size() > 0) {
                 Richiesta.getDeletedIds().remove(0);
             }
