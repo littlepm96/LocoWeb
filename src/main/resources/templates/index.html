@@ -24,20 +24,431 @@
     <link rel="stylesheet" id="wp-block-library-css" th:href="@{/assets/style.min.css}" type="text/css" media="all">
     <link rel="stylesheet" id="otter-blocks-css" th:href="@{/assets/blocks.css}" type="text/css" media="all">
     <link rel="stylesheet" id="wpdm-font-awesome-css" th:href="@{/assets/all.min.css}" type="text/css" media="all">
-    <link rel="stylesheet" id="wpdm-front-bootstrap-css" th:href="@{/assets/bootstrap.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="wpdm-front-bootstrap-css" th:href="@{/assets/bootstrap.min.css}" type="text/css"
+          media="all">
     <link rel="stylesheet" id="wpdm-front-css" th:href="@{/assets/front.css}" type="text/css" media="all">
     <link rel="stylesheet" id="dashicons-css" th:href="@{/assets/dashicons.min.css}" type="text/css" media="all">
-    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-0-css" th:href="@{/assets/font-awesome.min.css}" type="text/css" media="all">
-    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-1-css" th:href="@{/assets/public.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-0-css" th:href="@{/assets/font-awesome.min.css}"
+          type="text/css" media="all">
+    <link rel="stylesheet" id="obfx-module-pub-css-menu-icons-1-css" th:href="@{/assets/public.css}" type="text/css"
+          media="all">
     <link rel="stylesheet" id="neve-style-css" th:href="@{/assets/style.min1.css}" type="text/css" media="all">
     <style id="neve-style-inline-css" type="text/css">
-        .header-menu-sidebar-inner li.menu-item-nav-search { display: none; }
-        .container{ max-width: 748px; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"]{ max-width:718px;margin:auto } .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */ ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"]{ background-color: var(--nv-primary-accent);color: #ffffff;border-radius:3px;border:none;border-width:1px 1px 1px 1px; } .button.button-primary:hover, ul[id^="nv-primary-navigation"] li.button.button-primary > a:hover, .menu li.button.button-primary > a:hover, .wp-block-button.is-style-primary .wp-block-button__link:hover, .wc-block-grid .wp-block-button .wp-block-button__link:hover, form input[type="submit"]:hover, form button[type="submit"]:hover, #comments input[type="submit"]:hover{ background-color: var(--nv-primary-accent);color: #ffffff; } .button.button-secondary, .cart-off-canvas .button.nv-close-cart-sidebar, .wp-block-button.is-style-secondary .wp-block-button__link{ background-color: rgba(0,0,0,0);color: var(--nv-text-color);border-radius:3px;border:1px solid;border-width:1px 1px 1px 1px; } .button.button-secondary:hover, .cart-off-canvas .button.nv-close-cart-sidebar:hover, .wp-block-button.is-style-secondary .wp-block-button__link:hover{ background-color: rgba(0,0,0,0);color: var(--nv-text-color); } form:not([role="search"]):not(.woocommerce-cart-form):not(.woocommerce-ordering):not(.cart) input:read-write:not(#coupon_code), form textarea, form select{ margin-bottom: 10px; } form input:read-write, form textarea, form select, form select option, form.wp-block-search input.wp-block-search__input{ color: var(--nv-text-color); } form label, .wpforms-container .wpforms-field-label{ margin-bottom: 10px; } form.search-form input:read-write{ padding-right:45px !important; } .header-main-inner,.header-main-inner a:not(.button),.header-main-inner .navbar-toggle{ color: var(--nv-text-color); } .header-main-inner .nv-icon svg,.header-main-inner .nv-contact-list svg{ fill: var(--nv-text-color); } .header-main-inner .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-main-inner .nav-ul .sub-menu{ background-color: #ffffff; } .hfg_header .header-main-inner{ background-color: #ffffff; } .header-menu-sidebar .header-menu-sidebar-bg,.header-menu-sidebar .header-menu-sidebar-bg a:not(.button),.header-menu-sidebar .header-menu-sidebar-bg .navbar-toggle{ color: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .nv-icon svg,.header-menu-sidebar .header-menu-sidebar-bg .nv-contact-list svg{ fill: var(--nv-text-color); } .header-menu-sidebar .header-menu-sidebar-bg .icon-bar{ background-color: var(--nv-text-color); } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg .nav-ul .sub-menu{ background-color: #ffffff; } .hfg_header .header-menu-sidebar .header-menu-sidebar-bg{ background-color: #ffffff; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 120px; max-height: 60px } .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle, .header-menu-sidebar .close-sidebar-panel .navbar-toggle{ border-radius:3px;border:1px solid;border-width:1px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span,.builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret{ color: var(--nv-text-color); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a:after,.builder-item--primary-menu .nav-menu-primary > .nav-ul li > .has-caret > a:after{ background-color: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item):hover > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret{ color: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret svg{ fill: var(--nv-secondary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > a,.builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > .has-caret > a{ color: var(--nv-primary-accent); } .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > .has-caret svg{ fill: var(--nv-primary-accent); } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .footer-bottom-inner{ background-color: #24292e; } .footer-bottom-inner,.footer-bottom-inner a:not(.button),.footer-bottom-inner .navbar-toggle{ color: var(--nv-text-color); } .footer-bottom-inner .nv-icon svg,.footer-bottom-inner .nv-contact-list svg{ fill: var(--nv-text-color); } .footer-bottom-inner .icon-bar{ background-color: var(--nv-text-color); } .footer-bottom-inner .nav-ul .sub-menu{ background-color: #24292e; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; font-weight: 500; text-transform: none; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } @media(min-width: 576px){ .container{ max-width: 992px; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: 140px; max-height: 80px} .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }@media(min-width: 960px){ .container{ max-width: 1170px; } #content .container .col, #content .container-fluid .col{ max-width: 70%; } .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid .alignfull > [class*="__inner-container"], .container-fluid .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .nv-sidebar-wrap, .nv-sidebar-wrap.shop-sidebar{ max-width: 30%; } .header-menu-sidebar{ width: 360px; } .builder-item--logo .site-logo img{ max-width: calc(100% - 10px); max-height: 100px} .builder-item--logo .site-logo{ padding:10px 0px 10px 0px; } .builder-item--logo{ margin:0px 0px 0px 0px; } .builder-item--nav-icon .navbar-toggle{ padding:10px 15px 10px 15px; } .builder-item--nav-icon{ margin:0px 0px 0px 0px; } .builder-item--primary-menu .nav-ul > li:not(:last-of-type){ margin-right:20px; } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart) > a:after{ left:-10px;right:-10px } .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after{ width: calc(100% + 20px); } .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span{ min-height: 25px; } .builder-item--primary-menu{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--primary-menu svg{ width: 1em;height: 1em; } .builder-item--footer_copyright{ font-size: 1em; line-height: 1.6em; letter-spacing: 0px; padding:0px 0px 0px 0px;margin:0px 0px 0px 0px; } .builder-item--footer_copyright svg{ width: 1em;height: 1em; } }.nv-content-wrap .elementor a:not(.button):not(.wp-block-file__button){ text-decoration: none; }:root{--nv-primary-accent:#0366d6;--nv-secondary-accent:#0e509a;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#393939;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}
-        :root{--e-global-color-nvprimaryaccent:#0366d6;--e-global-color-nvsecondaryaccent:#0e509a;--e-global-color-nvsitebg:#;--e-global-color-nvlightbg:#ededed;--e-global-color-nvdarkbg:#14171c;--e-global-color-nvtextcolor:#393939;--e-global-color-nvtextdarkbg:#ffffff;--e-global-color-nvc1:#77b978;--e-global-color-nvc2:#f37262;}
+        .header-menu-sidebar-inner li.menu-item-nav-search {
+            display: none;
+        }
+
+        .container {
+            max-width: 748px;
+        }
+
+        .has-neve-button-color-color {
+            color: var(--nv-primary-accent) !important;
+        }
+
+        .has-neve-button-color-background-color {
+            background-color: var(--nv-primary-accent) !important;
+        }
+
+        .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"] {
+            max-width: 718px;
+            margin: auto
+        }
+
+        .button.button-primary, button, input[type=button], .btn, input[type="submit"], /* Buttons in navigation */
+        ul[id^="nv-primary-navigation"] li.button.button-primary > a, .menu li.button.button-primary > a, .wp-block-button.is-style-primary .wp-block-button__link, .wc-block-grid .wp-block-button .wp-block-button__link, form input[type="submit"], form button[type="submit"], #comments input[type="submit"] {
+            background-color: var(--nv-primary-accent);
+            color: #ffffff;
+            border-radius: 3px;
+            border: none;
+            border-width: 1px 1px 1px 1px;
+        }
+
+        .button.button-primary:hover, ul[id^="nv-primary-navigation"] li.button.button-primary > a:hover, .menu li.button.button-primary > a:hover, .wp-block-button.is-style-primary .wp-block-button__link:hover, .wc-block-grid .wp-block-button .wp-block-button__link:hover, form input[type="submit"]:hover, form button[type="submit"]:hover, #comments input[type="submit"]:hover {
+            background-color: var(--nv-primary-accent);
+            color: #ffffff;
+        }
+
+        .button.button-secondary, .cart-off-canvas .button.nv-close-cart-sidebar, .wp-block-button.is-style-secondary .wp-block-button__link {
+            background-color: rgba(0, 0, 0, 0);
+            color: var(--nv-text-color);
+            border-radius: 3px;
+            border: 1px solid;
+            border-width: 1px 1px 1px 1px;
+        }
+
+        .button.button-secondary:hover, .cart-off-canvas .button.nv-close-cart-sidebar:hover, .wp-block-button.is-style-secondary .wp-block-button__link:hover {
+            background-color: rgba(0, 0, 0, 0);
+            color: var(--nv-text-color);
+        }
+
+        form:not([role="search"]):not(.woocommerce-cart-form):not(.woocommerce-ordering):not(.cart) input:read-write:not(#coupon_code), form textarea, form select {
+            margin-bottom: 10px;
+        }
+
+        form input:read-write, form textarea, form select, form select option, form.wp-block-search input.wp-block-search__input {
+            color: var(--nv-text-color);
+        }
+
+        form label, .wpforms-container .wpforms-field-label {
+            margin-bottom: 10px;
+        }
+
+        form.search-form input:read-write {
+            padding-right: 45px !important;
+        }
+
+        .header-main-inner, .header-main-inner a:not(.button), .header-main-inner .navbar-toggle {
+            color: var(--nv-text-color);
+        }
+
+        .header-main-inner .nv-icon svg, .header-main-inner .nv-contact-list svg {
+            fill: var(--nv-text-color);
+        }
+
+        .header-main-inner .icon-bar {
+            background-color: var(--nv-text-color);
+        }
+
+        .hfg_header .header-main-inner .nav-ul .sub-menu {
+            background-color: #ffffff;
+        }
+
+        .hfg_header .header-main-inner {
+            background-color: #ffffff;
+        }
+
+        .header-menu-sidebar .header-menu-sidebar-bg, .header-menu-sidebar .header-menu-sidebar-bg a:not(.button), .header-menu-sidebar .header-menu-sidebar-bg .navbar-toggle {
+            color: var(--nv-text-color);
+        }
+
+        .header-menu-sidebar .header-menu-sidebar-bg .nv-icon svg, .header-menu-sidebar .header-menu-sidebar-bg .nv-contact-list svg {
+            fill: var(--nv-text-color);
+        }
+
+        .header-menu-sidebar .header-menu-sidebar-bg .icon-bar {
+            background-color: var(--nv-text-color);
+        }
+
+        .hfg_header .header-menu-sidebar .header-menu-sidebar-bg .nav-ul .sub-menu {
+            background-color: #ffffff;
+        }
+
+        .hfg_header .header-menu-sidebar .header-menu-sidebar-bg {
+            background-color: #ffffff;
+        }
+
+        .header-menu-sidebar {
+            width: 360px;
+        }
+
+        .builder-item--logo .site-logo img {
+            max-width: 120px;
+            max-height: 60px
+        }
+
+        .builder-item--logo .site-logo {
+            padding: 10px 0px 10px 0px;
+        }
+
+        .builder-item--logo {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .builder-item--nav-icon .navbar-toggle, .header-menu-sidebar .close-sidebar-panel .navbar-toggle {
+            border-radius: 3px;
+            border: 1px solid;
+            border-width: 1px;
+        }
+
+        .builder-item--nav-icon .navbar-toggle {
+            padding: 10px 15px 10px 15px;
+        }
+
+        .builder-item--nav-icon {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret {
+            color: var(--nv-text-color);
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a:after, .builder-item--primary-menu .nav-menu-primary > .nav-ul li > .has-caret > a:after {
+            background-color: var(--nv-secondary-accent);
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item):hover > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret {
+            color: var(--nv-secondary-accent);
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li:hover > .has-caret svg {
+            fill: var(--nv-secondary-accent);
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current_page_item > .has-caret > a {
+            color: var(--nv-primary-accent);
+        }
+
+        .builder-item--primary-menu .nav-menu-primary > .nav-ul li.current-menu-item > .has-caret svg {
+            fill: var(--nv-primary-accent);
+        }
+
+        .builder-item--primary-menu .nav-ul > li:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after {
+            width: calc(100% + 20px);
+        }
+
+        .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span {
+            min-height: 25px;
+        }
+
+        .builder-item--primary-menu {
+            font-size: 1em;
+            line-height: 1.6em;
+            letter-spacing: 0px;
+            font-weight: 500;
+            text-transform: none;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .builder-item--primary-menu svg {
+            width: 1em;
+            height: 1em;
+        }
+
+        .footer-bottom-inner {
+            background-color: #24292e;
+        }
+
+        .footer-bottom-inner, .footer-bottom-inner a:not(.button), .footer-bottom-inner .navbar-toggle {
+            color: var(--nv-text-color);
+        }
+
+        .footer-bottom-inner .nv-icon svg, .footer-bottom-inner .nv-contact-list svg {
+            fill: var(--nv-text-color);
+        }
+
+        .footer-bottom-inner .icon-bar {
+            background-color: var(--nv-text-color);
+        }
+
+        .footer-bottom-inner .nav-ul .sub-menu {
+            background-color: #24292e;
+        }
+
+        .builder-item--footer_copyright {
+            font-size: 1em;
+            line-height: 1.6em;
+            letter-spacing: 0px;
+            font-weight: 500;
+            text-transform: none;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .builder-item--footer_copyright svg {
+            width: 1em;
+            height: 1em;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 992px;
+            }
+
+            .header-menu-sidebar {
+                width: 360px;
+            }
+
+            .builder-item--logo .site-logo img {
+                max-width: 140px;
+                max-height: 80px
+            }
+
+            .builder-item--logo .site-logo {
+                padding: 10px 0px 10px 0px;
+            }
+
+            .builder-item--logo {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--nav-icon .navbar-toggle {
+                padding: 10px 15px 10px 15px;
+            }
+
+            .builder-item--nav-icon {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--primary-menu .nav-ul > li:not(:last-of-type) {
+                margin-right: 20px;
+            }
+
+            .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after {
+                width: calc(100% + 20px);
+            }
+
+            .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span {
+                min-height: 25px;
+            }
+
+            .builder-item--primary-menu {
+                font-size: 1em;
+                line-height: 1.6em;
+                letter-spacing: 0px;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--primary-menu svg {
+                width: 1em;
+                height: 1em;
+            }
+
+            .builder-item--footer_copyright {
+                font-size: 1em;
+                line-height: 1.6em;
+                letter-spacing: 0px;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--footer_copyright svg {
+                width: 1em;
+                height: 1em;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .container {
+                max-width: 1170px;
+            }
+
+            #content .container .col, #content .container-fluid .col {
+                max-width: 70%;
+            }
+
+            .alignfull > [class*="__inner-container"], .alignwide > [class*="__inner-container"] {
+                max-width: 789px
+            }
+
+            .container-fluid .alignfull > [class*="__inner-container"], .container-fluid .alignwide > [class*="__inner-container"] {
+                max-width: calc(70% + 15px)
+            }
+
+            .nv-sidebar-wrap, .nv-sidebar-wrap.shop-sidebar {
+                max-width: 30%;
+            }
+
+            .header-menu-sidebar {
+                width: 360px;
+            }
+
+            .builder-item--logo .site-logo img {
+                max-width: calc(100% - 10px);
+                max-height: 100px
+            }
+
+            .builder-item--logo .site-logo {
+                padding: 10px 0px 10px 0px;
+            }
+
+            .builder-item--logo {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--nav-icon .navbar-toggle {
+                padding: 10px 15px 10px 15px;
+            }
+
+            .builder-item--nav-icon {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--primary-menu .nav-ul > li:not(:last-of-type) {
+                margin-right: 20px;
+            }
+
+            .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart) > a:after {
+                left: -10px;
+                right: -10px
+            }
+
+            .builder-item--primary-menu .style-full-height .nav-ul li:not(.menu-item-nav-search):not(.menu-item-nav-cart):hover > a:after {
+                width: calc(100% + 20px);
+            }
+
+            .builder-item--primary-menu .nav-ul li a, .builder-item--primary-menu .neve-mm-heading span {
+                min-height: 25px;
+            }
+
+            .builder-item--primary-menu {
+                font-size: 1em;
+                line-height: 1.6em;
+                letter-spacing: 0px;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--primary-menu svg {
+                width: 1em;
+                height: 1em;
+            }
+
+            .builder-item--footer_copyright {
+                font-size: 1em;
+                line-height: 1.6em;
+                letter-spacing: 0px;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+            }
+
+            .builder-item--footer_copyright svg {
+                width: 1em;
+                height: 1em;
+            }
+        }
+
+        .nv-content-wrap .elementor a:not(.button):not(.wp-block-file__button) {
+            text-decoration: none;
+        }
+
+        :root {
+            --nv-primary-accent: #0366d6;
+            --nv-secondary-accent: #0e509a;
+            --nv-site-bg: #ffffff;
+            --nv-light-bg: #ededed;
+            --nv-dark-bg: #14171c;
+            --nv-text-color: #393939;
+            --nv-text-dark-bg: #ffffff;
+            --nv-c-1: #77b978;
+            --nv-c-2: #f37262;
+            --nv-fallback-ff: Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --e-global-color-nvprimaryaccent: #0366d6;
+            --e-global-color-nvsecondaryaccent: #0e509a;
+            --e-global-color-nvsitebg: #;
+            --e-global-color-nvlightbg: #ededed;
+            --e-global-color-nvdarkbg: #14171c;
+            --e-global-color-nvtextcolor: #393939;
+            --e-global-color-nvtextdarkbg: #ffffff;
+            --e-global-color-nvc1: #77b978;
+            --e-global-color-nvc2: #f37262;
+        }
     </style>
-    <link rel="stylesheet" id="elementor-icons-css" th:href="@{/assets/elementor-icons.min.css}" type="text/css" media="all">
-    <link rel="stylesheet" id="elementor-frontend-legacy-css" th:href="@{/assets/frontend-legacy.min.css}" type="text/css" media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" th:href="@{/assets/frontend.min.css}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" th:href="@{/assets/elementor-icons.min.css}" type="text/css"
+          media="all">
+    <link rel="stylesheet" id="elementor-frontend-legacy-css" th:href="@{/assets/frontend-legacy.min.css}"
+          type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" th:href="@{/assets/frontend.min.css}" type="text/css"
+          media="all">
     <link rel="stylesheet" id="elementor-post-759-css" th:href="@{/assets/post-759.css}" type="text/css" media="all">
     <link rel="stylesheet" id="font-awesome-css" th:href="@{/assets/font-awesome.min1.css}" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-global-css" th:href="@{/assets/global.css}" type="text/css" media="all">
@@ -49,12 +460,18 @@
     <script type="text/javascript" th:src="@{/assets/bootstrap.min.js}" id="wpdm-front-bootstrap-js"></script>
     <script type="text/javascript" id="wpdm-frontjs-js-extra">
         /* <![CDATA[ */
-        var wpdm_url = {"home":"https:\/\/www.cnapp.it\/","site":"https:\/\/www.cnapp.it\/","ajax":"https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php"};
-        var wpdm_js = {"spinner":"<i class=\"fas fa-sun fa-spin\"><\/i>"};
+        var wpdm_url = {
+            "home": "https:\/\/www.cnapp.it\/",
+            "site": "https:\/\/www.cnapp.it\/",
+            "ajax": "https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php"
+        };
+        var wpdm_js = {"spinner": "<i class=\"fas fa-sun fa-spin\"><\/i>"};
         /* ]]> */
     </script>
     <script type="text/javascript" th:src="@{/assets/front.js}" id="wpdm-frontjs-js"></script>
-    <link rel="https://api.w.org/" href="https://www.cnapp.it/wp-json/"><link rel="alternate" type="application/json" href="https://www.cnapp.it/wp-json/wp/v2/pages/91"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cnapp.it/xmlrpc.php?rsd">
+    <link rel="https://api.w.org/" href="https://www.cnapp.it/wp-json/">
+    <link rel="alternate" type="application/json" href="https://www.cnapp.it/wp-json/wp/v2/pages/91">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cnapp.it/xmlrpc.php?rsd">
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cnapp.it/wp-includes/wlwmanifest.xml">
     <meta name="generator" content="WordPress 5.6.9">
     <!--<link rel="canonical" href="https://www.cnapp.it/">
@@ -67,15 +484,15 @@
     <link rel="apple-touch-icon" th:href="@{/assets/logos/loco-motiva.jpg}">
     <style id="wp-custom-css">
         .nv-navbar {
-            background:#fff;
-            height:80px;
-            z-index:170;
-            margin:0 auto;
-            width:100%;
-            position:fixed;
-            top:0;
-            left:0;
-            right:0;
+            background: #fff;
+            height: 80px;
+            z-index: 170;
+            margin: 0 auto;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             text-align: center;
         }
     </style>
@@ -102,6 +519,7 @@
             text-transform: uppercase;
             font-weight: 700;
         }
+
         .w3eden #csp .list-group-item {
             text-transform: unset;
         }
@@ -151,26 +569,35 @@
 
 
     </style>
-    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"></head>
+    <link id="avast_os_ext_custom_font"
+          href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet"
+          type="text/css">
+</head>
 
-<body class="home page-template page-template-page-templates page-template-template-pagebuilder-full-width page-template-page-templatestemplate-pagebuilder-full-width-php page page-id-91 wp-custom-logo nv-sidebar-full-width menu_sidebar_slide_left elementor-default elementor-kit-759 elementor-page elementor-page-91 e--ua-blink e--ua-chrome e--ua-webkit" id="neve_body" data-elementor-device-mode="desktop">
+<body class="home page-template page-template-page-templates page-template-template-pagebuilder-full-width page-template-page-templatestemplate-pagebuilder-full-width-php page page-id-91 wp-custom-logo nv-sidebar-full-width menu_sidebar_slide_left elementor-default elementor-kit-759 elementor-page elementor-page-91 e--ua-blink e--ua-chrome e--ua-webkit"
+      id="neve_body" data-elementor-device-mode="desktop">
 <div class="wrapper">
     <header class="header" role="banner">
         <a class="neve-skip-link show-on-focus" href="/#content" tabindex="0">Vai al contenuto</a>
         <div id="header-grid" class="hfg_header site-header">
-            <nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="desktop">
+            <nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row"
+                 data-row-id="main" data-show-on="desktop">
                 <div class="header--row-inner header-main-inner">
                     <div class="container">
                         <div class="row row--wrapper" data-section="hfg_header_layout_main">
                             <div class="builder-item hfg-item-first col-4 col-md-4 col-sm-4 desktop-left tablet-left mobile-left">
-                                <div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+                                <div class="item--inner builder-item--logo" data-section="title_tagline"
+                                     data-item-id="logo">
                                     <div class="site-logo">
-                                        <a class="brand" href="https://www.fondazionevarrone.it/" title="Fondazione Varrone" aria-label="Fondazione Varrone">
+                                        <a class="brand" href="https://www.fondazionevarrone.it/"
+                                           title="Fondazione Varrone" aria-label="Fondazione Varrone">
                                             <div class="title-with-logo">
-                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}" alt="Fondazione Varrone">
+                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}"
+                                                     alt="Fondazione Varrone">
                                             </div>
                                         </a>
-                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva" aria-label="Loco Motiva">
+                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva"
+                                           aria-label="Loco Motiva">
                                             <div class="title-with-logo">
                                                 <img th:src="@{/assets/logos/loco-motiva.jpg}" alt="Loco Motiva">
                                             </div>
@@ -179,13 +606,27 @@
                                 </div>
                             </div>
                             <div class="builder-item has-nav hfg-item-last col-8 col-md-8 col-sm-8 desktop-right tablet-left mobile-left">
-                                <div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+                                <div class="item--inner builder-item--primary-menu has_menu"
+                                     data-section="header_menu_primary" data-item-id="primary-menu">
                                     <div class="nv-nav-wrap">
-                                        <div role="navigation" class="style-plain nav-menu-primary" aria-label="Menu principale">
+                                        <div role="navigation" class="style-plain nav-menu-primary"
+                                             aria-label="Menu principale">
                                             <ul id="nv-primary-navigation-main" class="primary-menu-ul nav-ul">
-                                                <li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a th:href="@{login}"><i class="obfx-menu-icon dashicons dashicons-admin-network"></i>Amministrazione</a></li>
-                                                <li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a th:href="@{addRichiestaForm}"><i class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenota Online</a></li>
-                                                <li id="menu-item-749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="#contatti"><i class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a></li>
+                                                <li id="menu-item-298"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298">
+                                                    <a th:href="@{login}"><i
+                                                            class="obfx-menu-icon dashicons dashicons-admin-network"></i>Amministrazione</a>
+                                                </li>
+                                                <li id="menu-item-297"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
+                                                    <a th:href="@{addRichiestaForm}"><i
+                                                            class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenota
+                                                        Online</a></li>
+                                                <li id="menu-item-749"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749">
+                                                    <a href="#contatti"><i
+                                                            class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -195,19 +636,24 @@
                     </div>
                 </div>
             </nav>
-            <nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="mobile">
+            <nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row"
+                 data-row-id="main" data-show-on="mobile">
                 <div class="header--row-inner header-main-inner">
                     <div class="container">
                         <div class="row row--wrapper" data-section="hfg_header_layout_main">
                             <div class="builder-item hfg-item-first col-8 col-md-8 col-sm-8 desktop-left tablet-left mobile-left">
-                                <div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+                                <div class="item--inner builder-item--logo" data-section="title_tagline"
+                                     data-item-id="logo">
                                     <div class="site-logo">
-                                        <a class="brand" href="https://www.fondazionevarrone.it/" title="Fondazione Varrone" aria-label="Fondazione Varrone">
+                                        <a class="brand" href="https://www.fondazionevarrone.it/"
+                                           title="Fondazione Varrone" aria-label="Fondazione Varrone">
                                             <div class="title-with-logo">
-                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}" alt="Fondazione Varrone">
+                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}"
+                                                     alt="Fondazione Varrone">
                                             </div>
                                         </a>
-                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva" aria-label="Loco Motiva">
+                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva"
+                                           aria-label="Loco Motiva">
                                             <div class="title-with-logo">
                                                 <img th:src="@{/assets/logos/loco-motiva.jpg}" alt="Loco Motiva">
                                             </div>
@@ -216,7 +662,8 @@
                                 </div>
                             </div>
                             <div class="builder-item hfg-item-last col-4 col-md-4 col-sm-4 desktop-right tablet-right mobile-right">
-                                <div class="item--inner builder-item--nav-icon" data-section="header_menu_icon" data-item-id="nav-icon">
+                                <div class="item--inner builder-item--nav-icon" data-section="header_menu_icon"
+                                     data-item-id="nav-icon">
                                     <div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
                                         <button class="navbar-toggle" aria-label="Menu di navigazione">
                                             <div class="bars">
@@ -248,12 +695,20 @@
                     </div>
                     <div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner ">
                         <div class="builder-item has-nav hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-right tablet-left mobile-left">
-                            <div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+                            <div class="item--inner builder-item--primary-menu has_menu"
+                                 data-section="header_menu_primary" data-item-id="primary-menu">
                                 <div class="nv-nav-wrap">
-                                    <div role="navigation" class="style-plain nav-menu-primary" aria-label="Menu principale">
+                                    <div role="navigation" class="style-plain nav-menu-primary"
+                                         aria-label="Menu principale">
                                         <ul id="nv-primary-navigation-sidebar" class="primary-menu-ul nav-ul">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a th:href="@{addRichiestaForm}"><i class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenotazione</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="#contatti"><i class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
+                                                <a th:href="@{addRichiestaForm}"><i
+                                                        class="obfx-menu-icon dashicons dashicons-welcome-write-blog"></i>Prenotazione</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749">
+                                                <a href="#contatti"><i
+                                                        class="obfx-menu-icon dashicons dashicons-id"></i>Contatti</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -269,17 +724,27 @@
         <div data-elementor-type="wp-post" data-elementor-id="91" class="elementor elementor-91">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-6bea8fc8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6bea8fc8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <section
+                            class="elementor-section elementor-top-section elementor-element elementor-element-6bea8fc8 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="6bea8fc8" data-element_type="section"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-background-overlay"></div>
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c206e1f" data-id="c206e1f" data-element_type="column">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c206e1f"
+                                     data-id="c206e1f" data-element_type="column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-19cd67d7 elementor-widget elementor-widget-heading" data-id="19cd67d7" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-19cd67d7 elementor-widget elementor-widget-heading"
+                                                 data-id="19cd67d7" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <p><h1 class="elementor-heading-title elementor-size-default">Una Carezza per l'Autismo</h1></p>
-                                                    <p><h6 class="elementor-heading-subtitle elementor-size-default">Sportello di consulenza e interventi per la genitorialità, l'affettività e la sessualità di persone disabili</h6></p>
+                                                    <p>
+                                                    <h1 class="elementor-heading-title elementor-size-default">Una
+                                                        Carezza per l'Autismo</h1></p>
+                                                    <p><h6 class="elementor-heading-subtitle elementor-size-default">
+                                                    Sportello di consulenza e interventi per la genitorialità,
+                                                    l'affettività e la sessualità di persone disabili</h6></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,27 +753,41 @@
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-d0e634d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d0e634d" data-element_type="section">
+                    <section
+                            class="elementor-section elementor-top-section elementor-element elementor-element-d0e634d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="d0e634d" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e668e57" data-id="e668e57" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e668e57"
+                                     data-id="e668e57" data-element_type="column"
+                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-9dbb91e elementor-widget elementor-widget-menu-anchor" data-id="9dbb91e" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                            <div class="elementor-element elementor-element-9dbb91e elementor-widget elementor-widget-menu-anchor"
+                                                 data-id="9dbb91e" data-element_type="widget"
+                                                 data-widget_type="menu-anchor.default">
                                                 <div class="elementor-widget-container">
                                                     <div id="attivit" class="elementor-menu-anchor"></div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-7098d01 elementor-widget elementor-widget-heading" data-id="7098d01" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-7098d01 elementor-widget elementor-widget-heading"
+                                                 data-id="7098d01" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">01</div>		</div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-43eba95 elementor-widget elementor-widget-heading" data-id="43eba95" data-element_type="widget" data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default">Presentazione</h2>
+                                                    <div class="elementor-heading-title elementor-size-default">01</div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-29baea3 elementor-widget elementor-widget-heading" data-id="29baea3" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-43eba95 elementor-widget elementor-widget-heading"
+                                                 data-id="43eba95" data-element_type="widget"
+                                                 data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Presentazione</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-29baea3 elementor-widget elementor-widget-heading"
+                                                 data-id="29baea3" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
                                                     <div th:replace="partials/testi::presentazione"></div>
                                                 </div>
@@ -319,18 +798,31 @@
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-450d1c77 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="450d1c77" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <section
+                            class="elementor-section elementor-top-section elementor-element elementor-element-450d1c77 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="450d1c77" data-element_type="section"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-container elementor-column-gap-no">
                             <div class="elementor-row">
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-72732b06" data-id="72732b06" data-element_type="column">
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-72732b06"
+                                     data-id="72732b06" data-element_type="column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-790f6cb elementor-hidden-phone elementor-widget elementor-widget-image" data-id="790f6cb" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-element elementor-element-790f6cb elementor-hidden-phone elementor-widget elementor-widget-image"
+                                                 data-id="790f6cb" data-element_type="widget"
+                                                 data-widget_type="image.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-image">
                                                         <figure class="wp-caption">
-                                                            <img width="1024" height="684" th:src="@{/assets/logos/loco-motiva.jpg}" class="attachment-full size-full" alt="Società Cooperativa Sociale Onlus Loco Motiva" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px">
-                                                            <figcaption class="widget-image-caption wp-caption-text">Società Cooperativa Sociale Onlus Loco Motiva</figcaption>
+                                                            <img width="1024" height="684"
+                                                                 th:src="@{/assets/logos/loco-motiva.jpg}"
+                                                                 class="attachment-full size-full"
+                                                                 alt="Società Cooperativa Sociale Onlus Loco Motiva"
+                                                                 loading="lazy"
+                                                                 sizes="(max-width: 1024px) 100vw, 1024px">
+                                                            <figcaption class="widget-image-caption wp-caption-text">
+                                                                Società Cooperativa Sociale Onlus Loco Motiva
+                                                            </figcaption>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -338,37 +830,56 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-76d9e84e animated-slow animated fadeInRight" data-id="76d9e84e" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-76d9e84e animated-slow animated fadeInRight"
+                                     data-id="76d9e84e" data-element_type="column"
+                                     data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-1b5a5a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1b5a5a1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-1b5a5a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                    data-id="1b5a5a1" data-element_type="section"
+                                                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7707e49" data-id="7707e49" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7707e49"
+                                                             data-id="7707e49" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-abc5f2a elementor-widget elementor-widget-menu-anchor" data-id="abc5f2a" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                                                    <div class="elementor-element elementor-element-abc5f2a elementor-widget elementor-widget-menu-anchor"
+                                                                         data-id="abc5f2a" data-element_type="widget"
+                                                                         data-widget_type="menu-anchor.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div id="about" class="elementor-menu-anchor"></div>
+                                                                            <div id="about"
+                                                                                 class="elementor-menu-anchor"></div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-78e4827 elementor-widget elementor-widget-heading" data-id="78e4827" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-78e4827 elementor-widget elementor-widget-heading"
+                                                                         data-id="78e4827" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">02
+                                                                            <div class="elementor-heading-title elementor-size-default">
+                                                                                02
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-d82c840 elementor-widget elementor-widget-heading" data-id="d82c840" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-d82c840 elementor-widget elementor-widget-heading"
+                                                                         data-id="d82c840" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">Chi Siamo</h2>
+                                                                            <h2 class="elementor-heading-title elementor-size-default">
+                                                                                Chi Siamo</h2>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-2eacaafe elementor-widget elementor-widget-text-editor" data-id="2eacaafe" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-element elementor-element-2eacaafe elementor-widget elementor-widget-text-editor"
+                                                                         data-id="2eacaafe" data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div th:replace="partials/testi::chi-siamo"></div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-15e600a elementor-widget elementor-widget-spacer" data-id="15e600a" data-element_type="widget" data-widget_type="spacer.default">
+                                                                    <div class="elementor-element elementor-element-15e600a elementor-widget elementor-widget-spacer"
+                                                                         data-id="15e600a" data-element_type="widget"
+                                                                         data-widget_type="spacer.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner"></div>
@@ -381,13 +892,18 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-2f06e7f2 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="2f06e7f2" data-element_type="section">
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-2f06e7f2 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                                                    data-id="2f06e7f2" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ccceedd" data-id="ccceedd" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ccceedd"
+                                                             data-id="ccceedd" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-473f0410 elementor-widget elementor-widget-spacer" data-id="473f0410" data-element_type="widget" data-widget_type="spacer.default">
+                                                                    <div class="elementor-element elementor-element-473f0410 elementor-widget elementor-widget-spacer"
+                                                                         data-id="473f0410" data-element_type="widget"
+                                                                         data-widget_type="spacer.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner"></div>
@@ -397,10 +913,13 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-360713c" data-id="360713c" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-360713c"
+                                                             data-id="360713c" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-15a7280c elementor-widget elementor-widget-spacer" data-id="15a7280c" data-element_type="widget" data-widget_type="spacer.default">
+                                                                    <div class="elementor-element elementor-element-15a7280c elementor-widget elementor-widget-spacer"
+                                                                         data-id="15a7280c" data-element_type="widget"
+                                                                         data-widget_type="spacer.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner"></div>
@@ -410,10 +929,13 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7a76dcdb" data-id="7a76dcdb" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7a76dcdb"
+                                                             data-id="7a76dcdb" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-3568e0d0 elementor-widget elementor-widget-spacer" data-id="3568e0d0" data-element_type="widget" data-widget_type="spacer.default">
+                                                                    <div class="elementor-element elementor-element-3568e0d0 elementor-widget elementor-widget-spacer"
+                                                                         data-id="3568e0d0" data-element_type="widget"
+                                                                         data-widget_type="spacer.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner"></div>
@@ -423,10 +945,13 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-48c23e1" data-id="48c23e1" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-48c23e1"
+                                                             data-id="48c23e1" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-307d891d elementor-widget elementor-widget-spacer" data-id="307d891d" data-element_type="widget" data-widget_type="spacer.default">
+                                                                    <div class="elementor-element elementor-element-307d891d elementor-widget elementor-widget-spacer"
+                                                                         data-id="307d891d" data-element_type="widget"
+                                                                         data-widget_type="spacer.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner"></div>
@@ -445,47 +970,78 @@
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-538b1a0b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="538b1a0b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <section
+                            class="elementor-section elementor-top-section elementor-element elementor-element-538b1a0b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="538b1a0b" data-element_type="section"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5c8940d6" data-id="5c8940d6" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5c8940d6"
+                                     data-id="5c8940d6" data-element_type="column"
+                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-5a07725 elementor-widget elementor-widget-menu-anchor" data-id="5a07725" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                            <div class="elementor-element elementor-element-5a07725 elementor-widget elementor-widget-menu-anchor"
+                                                 data-id="5a07725" data-element_type="widget"
+                                                 data-widget_type="menu-anchor.default">
                                                 <div class="elementor-widget-container">
                                                     <div id="dettaglio" class="elementor-menu-anchor"></div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-c84ac7d elementor-widget elementor-widget-heading" data-id="c84ac7d" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-c84ac7d elementor-widget elementor-widget-heading"
+                                                 data-id="c84ac7d" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">03</div>		</div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-101449f6 elementor-widget elementor-widget-heading" data-id="101449f6" data-element_type="widget" data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default">Dettagli sportello</h2>
+                                                    <div class="elementor-heading-title elementor-size-default">03</div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-2949e172 elementor-widget elementor-widget-heading" data-id="2949e172" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-101449f6 elementor-widget elementor-widget-heading"
+                                                 data-id="101449f6" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">Obiettivi e bisogni, figure professionali, dove e come</div>
+                                                    <h2 class="elementor-heading-title elementor-size-default">Dettagli
+                                                        sportello</h2>
                                                 </div>
                                             </div>
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-53d359a3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53d359a3" data-element_type="section">
+                                            <div class="elementor-element elementor-element-2949e172 elementor-widget elementor-widget-heading"
+                                                 data-id="2949e172" data-element_type="widget"
+                                                 data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-heading-title elementor-size-default">
+                                                        Obiettivi e bisogni, figure professionali, dove e come
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-53d359a3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                    data-id="53d359a3" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-181a9df5 animated-slow animated fadeInLeft" data-id="181a9df5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-181a9df5 animated-slow animated fadeInLeft"
+                                                             data-id="181a9df5" data-element_type="column"
+                                                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-1ad60e3a elementor-widget elementor-widget-heading" data-id="1ad60e3a" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1ad60e3a elementor-widget elementor-widget-heading"
+                                                                         data-id="1ad60e3a" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">1</div>		</div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-6a22abe8 elementor-widget elementor-widget-heading" data-id="6a22abe8" data-element_type="widget" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h4 class="elementor-heading-title elementor-size-default">Obiettivi e bisogni</h4>
+                                                                            <div class="elementor-heading-title elementor-size-default">
+                                                                                1
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-6a0e361f elementor-widget elementor-widget-text-editor" data-id="6a0e361f" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-element elementor-element-6a22abe8 elementor-widget elementor-widget-heading"
+                                                                         data-id="6a22abe8" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h4 class="elementor-heading-title elementor-size-default">
+                                                                                Obiettivi e bisogni</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-6a0e361f elementor-widget elementor-widget-text-editor"
+                                                                         data-id="6a0e361f" data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                 <div th:replace="partials/testi::dettagli-obiettivi-e-bisogni"></div>
@@ -495,13 +1051,20 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3c525bbe" data-id="3c525bbe" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3c525bbe"
+                                                             data-id="3c525bbe" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-69f77860 elementor-widget elementor-widget-image" data-id="69f77860" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-element elementor-element-69f77860 elementor-widget elementor-widget-image"
+                                                                         data-id="69f77860" data-element_type="widget"
+                                                                         data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img width="900" height="533" th:src="@{/assets/images/59924659_2090679377899655_5589103700346929152_n.jpg}" class="attachment-full size-full" alt="" loading="lazy"sizes="(max-width: 900px) 100vw, 900px">
+                                                                                <img width="900" height="533"
+                                                                                     th:src="@{/assets/images/59924659_2090679377899655_5589103700346929152_n.jpg}"
+                                                                                     class="attachment-full size-full"
+                                                                                     alt="" loading="lazy"
+                                                                                     sizes="(max-width: 900px) 100vw, 900px">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -511,23 +1074,36 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-b2b4d59 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b2b4d59" data-element_type="section">
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-b2b4d59 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                    data-id="b2b4d59" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-591cb138 animated-slow nv-ie-width animated fadeInRight" data-id="591cb138" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-591cb138 animated-slow nv-ie-width animated fadeInRight"
+                                                             data-id="591cb138" data-element_type="column"
+                                                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-1b44dca6 elementor-widget elementor-widget-heading" data-id="1b44dca6" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1b44dca6 elementor-widget elementor-widget-heading"
+                                                                         data-id="1b44dca6" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">2</div>
+                                                                            <div class="elementor-heading-title elementor-size-default">
+                                                                                2
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-1146a21a elementor-widget elementor-widget-heading" data-id="1146a21a" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1146a21a elementor-widget elementor-widget-heading"
+                                                                         data-id="1146a21a" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h4 class="elementor-heading-title elementor-size-default">A chi è rivolto</h4>
+                                                                            <h4 class="elementor-heading-title elementor-size-default">
+                                                                                A chi è rivolto</h4>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-6e8a2ea6 elementor-widget elementor-widget-text-editor" data-id="6e8a2ea6" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-element elementor-element-6e8a2ea6 elementor-widget elementor-widget-text-editor"
+                                                                         data-id="6e8a2ea6" data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                 <div th:replace="partials/testi::dettagli-a-chi-e-rivolto"></div>
@@ -537,13 +1113,20 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74d3d879" data-id="74d3d879" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74d3d879"
+                                                             data-id="74d3d879" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-47372f34 elementor-widget elementor-widget-image" data-id="47372f34" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-element elementor-element-47372f34 elementor-widget elementor-widget-image"
+                                                                         data-id="47372f34" data-element_type="widget"
+                                                                         data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img width="2048" height="2049" th:src="@{/assets/images/22327975-5992-471d-a2f0-48a695a7b82a.jpg}" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 2048px) 100vw, 2048px">
+                                                                                <img width="2048" height="2049"
+                                                                                     th:src="@{/assets/images/22327975-5992-471d-a2f0-48a695a7b82a.jpg}"
+                                                                                     class="attachment-full size-full"
+                                                                                     alt="" loading="lazy"
+                                                                                     sizes="(max-width: 2048px) 100vw, 2048px">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -553,23 +1136,36 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-33330dfd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="33330dfd" data-element_type="section">
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-33330dfd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                    data-id="33330dfd" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-322c845a animated-slow animated fadeInLeft" data-id="322c845a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-322c845a animated-slow animated fadeInLeft"
+                                                             data-id="322c845a" data-element_type="column"
+                                                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-63630398 elementor-widget elementor-widget-heading" data-id="63630398" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-63630398 elementor-widget elementor-widget-heading"
+                                                                         data-id="63630398" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">3</div>
+                                                                            <div class="elementor-heading-title elementor-size-default">
+                                                                                3
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-1364b989 elementor-widget elementor-widget-heading" data-id="1364b989" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1364b989 elementor-widget elementor-widget-heading"
+                                                                         data-id="1364b989" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h4 class="elementor-heading-title elementor-size-default">Le figure professionali</h4>
+                                                                            <h4 class="elementor-heading-title elementor-size-default">
+                                                                                Le figure professionali</h4>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-6b2f2605 elementor-widget elementor-widget-text-editor" data-id="6b2f2605" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-element elementor-element-6b2f2605 elementor-widget elementor-widget-text-editor"
+                                                                         data-id="6b2f2605" data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                 <div th:replace="partials/testi::dettagli-figure-professionali"></div>
@@ -579,7 +1175,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5d4df345" data-id="5d4df345" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5d4df345"
+                                                             data-id="5d4df345" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <!--<div class="elementor-element elementor-element-a39ea2d elementor-widget elementor-widget-text-editor" data-id="a39ea2d" data-element_type="widget" data-widget_type="text-editor.default">
@@ -588,10 +1185,16 @@
                                                                                 <p>Designed by Freepik</p>					</div>
                                                                         </div>
                                                                     </div>-->
-                                                                    <div class="elementor-element elementor-element-7571a814 elementor-widget elementor-widget-image" data-id="7571a814" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-element elementor-element-7571a814 elementor-widget elementor-widget-image"
+                                                                         data-id="7571a814" data-element_type="widget"
+                                                                         data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img width="617" height="342" th:src="@{/assets/images/277745107_2848563958777856_3053607054756556886_n.jpg}" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 617px) 100vw, 617px">
+                                                                                <img width="617" height="342"
+                                                                                     th:src="@{/assets/images/277745107_2848563958777856_3053607054756556886_n.jpg}"
+                                                                                     class="attachment-full size-full"
+                                                                                     alt="" loading="lazy"
+                                                                                     sizes="(max-width: 617px) 100vw, 617px">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -601,23 +1204,36 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-b2b4d59 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b2b4d59" data-element_type="section">
+                                            <section
+                                                    class="elementor-section elementor-inner-section elementor-element elementor-element-b2b4d59 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                    data-id="b2b4d59" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-444444 animated-slow nv-ie-width animated fadeInRight" data-id="591cb138" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-444444 animated-slow nv-ie-width animated fadeInRight"
+                                                             data-id="591cb138" data-element_type="column"
+                                                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-1b44dca6 elementor-widget elementor-widget-heading" data-id="1b44dca6" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1b44dca6 elementor-widget elementor-widget-heading"
+                                                                         data-id="1b44dca6" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">4</div>
+                                                                            <div class="elementor-heading-title elementor-size-default">
+                                                                                4
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-1146a21a elementor-widget elementor-widget-heading" data-id="1146a21a" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-element elementor-element-1146a21a elementor-widget elementor-widget-heading"
+                                                                         data-id="1146a21a" data-element_type="widget"
+                                                                         data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h4 class="elementor-heading-title elementor-size-default">Dove e Come</h4>
+                                                                            <h4 class="elementor-heading-title elementor-size-default">
+                                                                                Dove e Come</h4>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="elementor-element elementor-element-6e8a2ea6 elementor-widget elementor-widget-text-editor" data-id="6e8a2ea6" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-element elementor-element-6e8a2ea6 elementor-widget elementor-widget-text-editor"
+                                                                         data-id="6e8a2ea6" data-element_type="widget"
+                                                                         data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                 <div th:replace="partials/testi::dettagli-dove-e-come"></div>
@@ -627,13 +1243,16 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74d3d879" data-id="74d3d879" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74d3d879"
+                                                             data-id="74d3d879" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-47372f34 elementor-widget elementor-widget-image" data-id="47372f34" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-element elementor-element-47372f34 elementor-widget elementor-widget-image"
+                                                                         data-id="47372f34" data-element_type="widget"
+                                                                         data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-<!--                                                                                <img width="1024" height="683" th:src="@{/assets/images/277745107_2848563958777856_3053607054756556886_n.jpg}" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px">-->
+                                                                                <!--                                                                                <img width="1024" height="683" th:src="@{/assets/images/277745107_2848563958777856_3053607054756556886_n.jpg}" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px">-->
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -714,60 +1333,85 @@
                             </div>
                         </div>
                     </section>-->
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-175239c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="175239c6" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <section
+                            class="elementor-section elementor-top-section elementor-element elementor-element-175239c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="175239c6" data-element_type="section"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-background-overlay"></div>
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-14ce9d5d" data-id="14ce9d5d" data-element_type="column">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-14ce9d5d"
+                                     data-id="14ce9d5d" data-element_type="column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-45762fa elementor-widget elementor-widget-menu-anchor" data-id="45762fa" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                            <div class="elementor-element elementor-element-45762fa elementor-widget elementor-widget-menu-anchor"
+                                                 data-id="45762fa" data-element_type="widget"
+                                                 data-widget_type="menu-anchor.default">
                                                 <div class="elementor-widget-container">
                                                     <div id="contatti" class="elementor-menu-anchor"></div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-6ebfa1ee elementor-widget elementor-widget-heading" data-id="6ebfa1ee" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-6ebfa1ee elementor-widget elementor-widget-heading"
+                                                 data-id="6ebfa1ee" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-heading-title elementor-size-default">4</div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-7e8c2c75 elementor-widget elementor-widget-heading" data-id="7e8c2c75" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-element elementor-element-7e8c2c75 elementor-widget elementor-widget-heading"
+                                                 data-id="7e8c2c75" data-element_type="widget"
+                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default">Contattaci</h2>
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Contattaci</h2>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-44288cb elementor-widget elementor-widget-text-editor" data-id="44288cb" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-element elementor-element-44288cb elementor-widget elementor-widget-text-editor"
+                                                 data-id="44288cb" data-element_type="widget"
+                                                 data-widget_type="text-editor.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-text-editor elementor-clearfix">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-7d50d4d8 elementor-widget elementor-widget-content_form_contact" data-id="7d50d4d8" data-element_type="widget" id="nv-contact-form" data-widget_type="content_form_contact.default">
+                                            <div class="elementor-element elementor-element-7d50d4d8 elementor-widget elementor-widget-content_form_contact"
+                                                 data-id="7d50d4d8" data-element_type="widget" id="nv-contact-form"
+                                                 data-widget_type="content_form_contact.default">
                                                 <div class="elementor-widget-container">
                                                     <ul id="contacts">
-                                                        <li>Ci trovi al <strong>Polo Autismo Sant’Eusanio Rieti, Via S. Eusanio n° 5 - 02100 Rieti</strong></li>
-                                                        <li>Sito web principale: <a class="bright-color" href="https://www.locomotiva.club/">www.locomotiva.club</a></li>
-                                                        <li>Email: <a class="bright-color" href="mailto:coop.locomotiva@libero.it">carezzaperautismo@outlook.com</a></li>
-                                                        <li>Contatto telefonico: <a class="bright-color" href="tel:+393407609403">(+39) 340 760 9403</a></li>
+                                                        <li>Ci trovi al <strong>Polo Autismo Sant’Eusanio Rieti, Via S.
+                                                            Eusanio n° 5 - 02100 Rieti</strong></li>
+                                                        <li>Sito web principale: <a class="bright-color"
+                                                                                    href="https://www.locomotiva.club/">www.locomotiva.club</a>
+                                                        </li>
+                                                        <li>Email: <a class="bright-color"
+                                                                      href="mailto:coop.locomotiva@libero.it">carezzaperautismo@outlook.com</a>
+                                                        </li>
+                                                        <li>Contatto telefonico: <a class="bright-color"
+                                                                                    href="tel:+393407609403">(+39) 340
+                                                            760 9403</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-a05ccf5 elementor-widget elementor-widget-html" data-id="a05ccf5" data-element_type="widget" data-widget_type="html.default">
+                                            <div class="elementor-element elementor-element-a05ccf5 elementor-widget elementor-widget-html"
+                                                 data-id="a05ccf5" data-element_type="widget"
+                                                 data-widget_type="html.default">
                                                 <div class="elementor-widget-container">
                                                     <style>
                                                         /*Disable animations on table/mobile*/
-                                                        @media only screen and (max-width : 768px) {
+                                                        @media only screen and (max-width: 768px) {
                                                             .animated, .animated.animated-slow {
                                                                 -webkit-animation-duration: 0s;
                                                                 animation-duration: 0s;
                                                             }
+
                                                             .fadeIn, .fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown {
                                                                 animation-name: none;
                                                             }
                                                         }
 
                                                         /*Fix flexbox IE11 width issue*/
-                                                        @media only screen and (min-width : 991px) {
+                                                        @media only screen and (min-width: 991px) {
                                                             .nv-ie-width .elementor-column-wrap {
                                                                 min-width: 452px;
                                                             }
@@ -789,9 +1433,11 @@
                                                             #alexis-pricing-column-width-1 .elementor-element-populated {
                                                                 margin: 0 0 0 -5px;
                                                             }
+
                                                             #alexis-pricing-column-width-2 .elementor-element-populated {
                                                                 margin: 0;
                                                             }
+
                                                             #alexis-pricing-column-width-3 .elementor-element-populated {
                                                                 margin: 0 0 0 5px;
                                                             }
@@ -806,7 +1452,7 @@
                                                         }
 
                                                         /*Center subscribe button on mobile*/
-                                                        @media only screen and (max-width : 468px) {
+                                                        @media only screen and (max-width: 468px) {
                                                             #nv-mobile-subscribe .content-form .submit-form {
                                                                 width: initial;
                                                             }
@@ -866,29 +1512,38 @@
 
     <footer class="site-footer" id="site-footer">
         <div class="hfg_footer">
-            <div class="footer--row footer-bottom layout-full-contained" id="cb-row--footer-bottom" data-row-id="bottom" data-show-on="desktop">
+            <div class="footer--row footer-bottom layout-full-contained" id="cb-row--footer-bottom" data-row-id="bottom"
+                 data-show-on="desktop">
                 <div class="footer--row-inner footer-bottom-inner footer-content-wrap">
                     <div class="container">
-                        <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row " data-section="hfg_footer_layout_bottom">
+                        <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row "
+                             data-section="hfg_footer_layout_bottom">
                             <div class="builder-item hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-center tablet-center mobile-center hfg-item-v-middle">
-                                <div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+                                <div class="item--inner builder-item--logo" data-section="title_tagline"
+                                     data-item-id="logo">
                                     <div class="site-logo">
-                                        <a class="brand" href="https://www.fondazionevarrone.it/" title="Fondazione Varrone" aria-label="Fondazione Varrone">
+                                        <a class="brand" href="https://www.fondazionevarrone.it/"
+                                           title="Fondazione Varrone" aria-label="Fondazione Varrone">
                                             <div class="title-with-logo">
-                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}" alt="Fondazione Varrone" style="background: white">
+                                                <img th:src="@{/assets/logos/logo-fondazione-varrone.png}"
+                                                     alt="Fondazione Varrone" style="background: white">
                                             </div>
                                         </a>
-                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva" aria-label="Loco Motiva">
+                                        <a class="brand" href="https://www.locomotiva.club/" title="Loco Motiva"
+                                           aria-label="Loco Motiva">
                                             <div class="title-with-logo">
                                                 <img th:src="@{/assets/logos/loco-motiva.jpg}" alt="Loco Motiva">
                                             </div>
                                         </a>
-                                        <a class="brand" href="http://www.chiesadirieti.it/" title="Chiesa di Rieti" aria-label="Chiesa di Rieti">
+                                        <a class="brand" href="http://www.chiesadirieti.it/" title="Chiesa di Rieti"
+                                           aria-label="Chiesa di Rieti">
                                             <div class="title-with-logo">
-                                                <img th:src="@{/assets/logos/chiesa-di-rieti.jpg}" alt="Chiesa di Rieti">
+                                                <img th:src="@{/assets/logos/chiesa-di-rieti.jpg}"
+                                                     alt="Chiesa di Rieti">
                                             </div>
                                         </a>
-                                        <a class="brand" href="https://www.aterrieti.it/" title="Ater Provincia di Rieti" aria-label="Ater Provincia di Rieti">
+                                        <a class="brand" href="https://www.aterrieti.it/"
+                                           title="Ater Provincia di Rieti" aria-label="Ater Provincia di Rieti">
                                             <div class="title-with-logo">
                                                 <img th:src="@{/assets/logos/ater.jpg}" alt="Ater Provincia di Rieti">
                                             </div>
@@ -897,11 +1552,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row " data-section="hfg_footer_layout_bottom">
+                        <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row "
+                             data-section="hfg_footer_layout_bottom">
                             <div class="builder-item hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-center tablet-center mobile-center hfg-item-v-middle">
-                                <div class="item--inner builder-item--footer_copyright" data-section="footer_copyright" data-item-id="footer_copyright">
+                                <div class="item--inner builder-item--footer_copyright" data-section="footer_copyright"
+                                     data-item-id="footer_copyright">
                                     <div class="component-wrap">
-<!--                                        <p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a></p>-->
+                                        <!--                                        <p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a></p>-->
                                     </div>
                                 </div>
                             </div>
@@ -915,25 +1572,36 @@
 
 </div><!--/.wrapper-->
 <script>
-    jQuery(function($){
+    jQuery(function ($) {
 
 
     });
 </script>
 <div id="fb-root"></div>
-<!-- Enter your scripts here --><link rel="stylesheet" id="eaw-elementor-css" th:href="@{/assets/public1.css}" type="text/css" media="all">
+<!-- Enter your scripts here -->
+<link rel="stylesheet" id="eaw-elementor-css" th:href="@{/assets/public1.css}" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-5-css" th:href="@{/assets/all.min1.css}" type="text/css" media="all">
 <link rel="stylesheet" id="content-forms-css" th:href="@{/assets/content-forms.css}" type="text/css" media="all">
 <link rel="stylesheet" id="e-animations-css" th:href="@{/assets/animations.min.css}" type="text/css" media="all">
 <script type="text/javascript" th:src="@{/assets/wp-polyfill.min.js}" id="wp-polyfill-js"></script>
 <script type="text/javascript" id="wp-polyfill-js-after">
-    ( 'fetch' in window ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+    ('fetch' in window) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>');
+    (document.contains) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>');
+    (window.DOMRect) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>');
+    (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>');
+    (window.FormData && window.FormData.prototype.keys) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>');
+    (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="https://www.cnapp.it/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>');
 </script>
 <script type="text/javascript" th:src="@{/assets/i18n.min.js}" id="wp-i18n-js"></script>
 <script type="text/javascript" th:src="@{/assets/jquery.form.min.js}" id="jquery-form-js"></script>
 <script type="text/javascript" id="neve-script-js-extra">
     /* <![CDATA[ */
-    var NeveProperties = {"ajaxurl":"https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php","nonce":"257f66f0d8","isRTL":"","isCustomize":""};
+    var NeveProperties = {
+        "ajaxurl": "https:\/\/www.cnapp.it\/wp-admin\/admin-ajax.php",
+        "nonce": "257f66f0d8",
+        "isRTL": "",
+        "isCustomize": ""
+    };
     /* ]]> */
 </script>
 <script type="text/javascript" th:src="@{/assets/frontend.js}" id="neve-script-js" async=""></script>
@@ -942,8 +1610,11 @@
 <script type="text/javascript" th:src="@{/assets/obfx-grid.js}" id="obfx-grid-js-js"></script>
 <script type="text/javascript" id="content-forms-js-extra">
     /* <![CDATA[ */
-    var contentFormsSettings = {"restUrl":"https:\/\/www.cnapp.it\/wp-json\/content-forms\/v1\/","nonce":"257f66f0d8"};
-    var formStyle = {"formStyle":"style=\"margin-left:0; text-align:left\""};
+    var contentFormsSettings = {
+        "restUrl": "https:\/\/www.cnapp.it\/wp-json\/content-forms\/v1\/",
+        "nonce": "257f66f0d8"
+    };
+    var formStyle = {"formStyle": "style=\"margin-left:0; text-align:left\""};
     /* ]]> */
 </script>
 <script type="text/javascript" th:src="@{/assets/content-forms.js}" id="content-forms-js"></script>
@@ -955,12 +1626,105 @@
 <script type="text/javascript" th:src="@{/assets/share-link.min.js}" id="share-link-js"></script>
 <script type="text/javascript" th:src="@{/assets/dialog.min.js}" id="elementor-dialog-js"></script>
 <script type="text/javascript" id="elementor-frontend-js-before">
-    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Condividi su Facebook","shareOnTwitter":"Condividi su Twitter","pinIt":"Pinterest","download":"Download","downloadImage":"Scarica immagine","fullscreen":"Schermo intero","zoom":"Zoom","share":"Condividi","playVideo":"Riproduci video","previous":"Precedente","next":"Successivo","close":"Chiudi"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.7.8","is_static":false,"experimentalFeatures":{"e_import_export":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/www.cnapp.it\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":91,"title":"Cnapp%20Onlus%20%E2%80%93%20Centro%20Studi%20in%20Neuroriabilitazione","excerpt":"","featuredImage":false}};
+    var elementorFrontendConfig = {
+        "environmentMode": {"edit": false, "wpPreview": false, "isScriptDebug": false},
+        "i18n": {
+            "shareOnFacebook": "Condividi su Facebook",
+            "shareOnTwitter": "Condividi su Twitter",
+            "pinIt": "Pinterest",
+            "download": "Download",
+            "downloadImage": "Scarica immagine",
+            "fullscreen": "Schermo intero",
+            "zoom": "Zoom",
+            "share": "Condividi",
+            "playVideo": "Riproduci video",
+            "previous": "Precedente",
+            "next": "Successivo",
+            "close": "Chiudi"
+        },
+        "is_rtl": false,
+        "breakpoints": {"xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600},
+        "responsive": {
+            "breakpoints": {
+                "mobile": {
+                    "label": "Mobile",
+                    "value": 767,
+                    "default_value": 767,
+                    "direction": "max",
+                    "is_enabled": true
+                },
+                "mobile_extra": {
+                    "label": "Mobile Extra",
+                    "value": 880,
+                    "default_value": 880,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "tablet": {
+                    "label": "Tablet",
+                    "value": 1024,
+                    "default_value": 1024,
+                    "direction": "max",
+                    "is_enabled": true
+                },
+                "tablet_extra": {
+                    "label": "Tablet Extra",
+                    "value": 1200,
+                    "default_value": 1200,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "laptop": {
+                    "label": "Laptop",
+                    "value": 1366,
+                    "default_value": 1366,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "widescreen": {
+                    "label": "Widescreen",
+                    "value": 2400,
+                    "default_value": 2400,
+                    "direction": "min",
+                    "is_enabled": false
+                }
+            }
+        },
+        "version": "3.7.8",
+        "is_static": false,
+        "experimentalFeatures": {
+            "e_import_export": true,
+            "e_hidden_wordpress_widgets": true,
+            "landing-pages": true,
+            "elements-color-picker": true,
+            "favorite-widgets": true,
+            "admin-top-bar": true
+        },
+        "urls": {"assets": "https:\/\/www.cnapp.it\/wp-content\/plugins\/elementor\/assets\/"},
+        "settings": {"page": [], "editorPreferences": []},
+        "kit": {
+            "global_image_lightbox": "yes",
+            "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+            "lightbox_enable_counter": "yes",
+            "lightbox_enable_fullscreen": "yes",
+            "lightbox_enable_zoom": "yes",
+            "lightbox_enable_share": "yes",
+            "lightbox_title_src": "title",
+            "lightbox_description_src": "description"
+        },
+        "post": {
+            "id": 91,
+            "title": "Cnapp%20Onlus%20%E2%80%93%20Centro%20Studi%20in%20Neuroriabilitazione",
+            "excerpt": "",
+            "featuredImage": false
+        }
+    };
 </script>
-<script type="text/javascript" th:src="@{/assets/frontend.min.js}" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-<script type="text/javascript" th:src="@{/assets/preloaded-modules.min.js}" id="preloaded-modules-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+<script type="text/javascript" th:src="@{/assets/frontend.min.js}" id="elementor-frontend-js"></script>
+<span id="elementor-device-mode" class="elementor-screen-only"></span>
+<script type="text/javascript" th:src="@{/assets/preloaded-modules.min.js}" id="preloaded-modules-js"></script>
+<svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
 
 
-
-
-</body></html>
+</body>
+</html>
