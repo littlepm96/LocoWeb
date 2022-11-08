@@ -31,7 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Other files ###
-src/main/resources/application.properties
-src/main/java/com/example/locoweb/utils/AppConstants.java
