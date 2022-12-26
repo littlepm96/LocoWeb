@@ -31,7 +31,7 @@
         <div th:if="${success} == false" class="alert alert-danger w-25 mx-auto">
             Errore nell'inserimento della richiesta.
         </div>
-        <form th:action="@{/saveRichiesta}" th:object="${richiesta}" method="POST">
+        <form class="col-12 col-md-10 col-lg-8" th:action="@{/saveRichiesta}" th:object="${richiesta}" method="POST">
             <div class="form-group">
                 <label>Nome</label>
                 <input type="text" maxlength="10" required="required" th:field="*{nome}" id="nome" class="form-control col-40 mb-4" placeholder="inserisci nome"/>
