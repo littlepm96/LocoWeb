@@ -55,12 +55,12 @@
             <button type="submit" class="btn btn-primary col-4">Inoltra Form</button>
             <input type="hidden" th:field="*{id}"/>
         </form>
-        <div>
+       <!-- <div>
             <img src="../static/assets/logos/logo-fondazione-varrone.png"></img>
             <img src="../static/assets/logos/loco-motiva.png"></img>
             <img src="../static/assets/logos/chiesa-di-rieti.png"></img>
             <img src="../static/assets/logos/ater.png"></img>
-        </div>
+        </div>-->
         <div class="p-3">
             <a th:if="${user}" class="d-block text-center" th:href="@{/admin/list}">Torna alla lista di richieste</a>
             <a th:unless="${user}" class="d-block text-center" th:href="@{/}">Torna alla homepage</a>
